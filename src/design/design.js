@@ -1,4 +1,4 @@
-export const pxToRem = (px: number) => {
+export const pxToRem = (px) => {
   const rootValue = 16
   const rem = (1 / rootValue) * px + 'rem'
   return rem
@@ -17,6 +17,8 @@ export const fontWeight = {
 }
 
 export const color = {
+  brand: '#ffc330',
+  body: '#fff',
   grey: {
     100: '#e8e7ec',
     200: '#a1aab3',
@@ -26,6 +28,9 @@ export const color = {
   },
   white: {
     100: '#ffffff',
+  },
+  black: {
+    100: '#171616',
   },
 }
 
@@ -37,7 +42,8 @@ export const borderRadius = {
 export const shadow = {}
 
 export const gradient = {
-  whitePurple: `linear-gradient(87.29deg,#ebebeccc 17.71%, #803ef61a 80.85%)`,
+  greyBlack: `linear-gradient(90deg, rgba(51,50,59,1) 0%, rgba(0,0,0,1) 25%);`,
+  blackGrey: `linear-gradient(90deg, rgba(0,0,0,1) 75%, rgba(51,50,59,1) 100%);`,
 }
 
 export const breakpoint = {

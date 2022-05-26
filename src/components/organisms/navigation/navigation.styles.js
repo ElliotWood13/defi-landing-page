@@ -34,13 +34,12 @@ const Nav = styled.nav`
   position: fixed;
   z-index: 10;
   width: ${(props) => (props.mobileMenuOpen ? '100%' : '0')};
-  background-color: ${color.white[100]};
+  background-color: ${color.black[100]};
   height: 100%;
   top: 0;
   left: 0;
   overflow: hidden;
   transition: width 0.5s ease;
-  background-color: ${color.white[100]};
   border-top-right-radius: ${pxToRem(40)};
 
   ${mediaQuery.sm} {
@@ -72,11 +71,12 @@ const NavLogoWrapper = styled.div`
 `
 
 const LinkList = styled.ul`
+  background-color: ${color.black[100]};
   width: 100%;
   padding: 0 ${pxToRem(20)} ${pxToRem(24)} ${pxToRem(20)};
 
   ${mediaQuery.md} {
-    padding: ${pxToRem(24)} ${pxToRem(16)};
+    padding: ${pxToRem(8)} ${pxToRem(16)};
     display: flex;
     justify-content: center;
   }
@@ -118,6 +118,7 @@ const StyledLink = styled.a`
   height: 100%;
   padding: ${pxToRem(16)} 0;
   font-size: ${pxToRem(18)};
+  color: ${color.grey[100]};
 
   ${mediaQuery.md} {
     font-size: ${pxToRem(16)};

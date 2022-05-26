@@ -76,7 +76,7 @@ export const Navigation = () => {
         <Nav role="navigation" mobileMenuOpen={mobileMenuOpen}>
           <NavLogoWrapper>
             <CloseButton onClick={() => setMobileMenuOpen(false)}>
-              <CloseSvg type="close" />
+              <CloseSvg type="close" fill={color.body} />
             </CloseButton>
           </NavLogoWrapper>
           <LinkList id="menu">

@@ -6,6 +6,7 @@ import { RegularLayout } from './components/layouts/regularLayout'
 import { Header } from './components/organisms/header'
 import { gradient } from './design'
 
+// TODO: Think about how to space sections
 // TODO: Change scroll to section to use useRef
 // TODO: Update logo192 and logo512 in index.html
 // TODO: Uninstall scrollSnapPolyfill package if not used
@@ -15,7 +16,7 @@ function App() {
     <>
       <Header />
       <RegularLayout>
-        <Section id="section1" background={gradient.whitePurple}>
+        <Section id="section1" background={gradient.greyBlack}>
           {/* brandSection */}
           <div>
             <p>Logo</p>
@@ -23,7 +24,7 @@ function App() {
             <h2>The future lives on the mesh</h2>
           </div>
         </Section>
-        <Section id="section2" background={gradient.whitePurple}>
+        <Section id="section2" background={gradient.blackGrey}>
           {/* defiSection */}
           <blockquote>
             "To change something, you must build a new model that makes the
@@ -55,7 +56,7 @@ function App() {
             <p>First tax haven in cryptocurrency.</p>
           </div>
         </Section>
-        <Section id="section3" background={gradient.whitePurple}>
+        <Section id="section3" background={gradient.greyBlack}>
           {/* featuresSection */}
           <h2>Built on the mesh network</h2>
           <h3>Enhanced Security Network</h3>
@@ -63,7 +64,7 @@ function App() {
           <h3>Consistent network stability</h3>
           <h3>Interoperability between tradfi and defi</h3>
         </Section>
-        <Section id="section4" background={gradient.whitePurple}>
+        <Section id="section4" background={gradient.blackGrey}>
           {/* teamSection */}
           <h2>Team</h2>
           <div>
@@ -79,7 +80,7 @@ function App() {
             <p>VP Development</p>
           </div>
         </Section>
-        <Section id="section5" background={gradient.whitePurple}>
+        <Section id="section5" background={gradient.greyBlack}>
           {/* kpiSection */}
           <h3>Q1 2022</h3>
           <ul>
@@ -134,7 +135,7 @@ function App() {
             <li>Tax haven rewards deployment</li>
           </ul>
         </Section>
-        <Section id="section6" background={gradient.whitePurple}>
+        <Section id="section6" background={gradient.blackGrey}>
           {/* countdownSection */}
           <h2>Defi 3.0 Begins Here</h2>
           <div>

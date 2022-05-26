@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import { layout, mediaQuery, pxToRem, color } from '../../../design'
+import { layout, mediaQuery, pxToRem, gradient } from '../../../design'
 
 const SectionWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : `${color.white[100]}`};
+  background: ${(props) => props.background ?? gradient.greyBlack};
   padding: ${pxToRem(100)} ${pxToRem(20)};
 
   ${mediaQuery.sm} {

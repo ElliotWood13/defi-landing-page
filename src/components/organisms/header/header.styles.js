@@ -4,12 +4,11 @@ import { layout, mediaQuery, pxToRem, color } from '../../../design'
 const HeaderWrapper = styled.header`
   display: flex;
   flex-wrap: wrap;
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : `${color.white[100]}`};
+  background-color: ${color.black[100]};
   padding: ${pxToRem(20)} ${pxToRem(20)};
 
   ${mediaQuery.sm} {
-    padding: ${pxToRem(30)} ${pxToRem(20)};
+    padding: ${pxToRem(8)} ${pxToRem(20)};
   }
 `
 

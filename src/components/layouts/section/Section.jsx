@@ -1,9 +1,9 @@
 import React from 'react'
 import { SectionWrapper, SectionPosition } from './section.styles'
 
-export const Section = ({ id, backgroundColor, children }) => {
+export const Section = ({ id, background, children }) => {
   return (
-    <SectionWrapper id={id} backgroundColor={backgroundColor}>
+    <SectionWrapper id={id} background={background}>
       <SectionPosition>{children}</SectionPosition>
     </SectionWrapper>
   )
