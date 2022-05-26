@@ -1,13 +1,14 @@
 import React from 'react'
 import './App.css'
-// import scrollSnapPolyfill from 'css-scroll-snap-polyfill' - uninstall package if not used
+// import scrollSnapPolyfill from 'css-scroll-snap-polyfill'
 import { Section } from './components/layouts/section'
 import { RegularLayout } from './components/layouts/regularLayout'
-import { Header } from './components/organisms/Header'
+import { Header } from './components/organisms/header'
 import { gradient } from './design'
 
-// TODO: Restrict content width
 // TODO: Change scroll to section to use useRef
+// TODO: Update logo192 and logo512 in index.html
+// TODO: Uninstall scrollSnapPolyfill package if not used
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <RegularLayout>
         <Section id="section1" background={gradient.whitePurple}>
+          {/* brandSection */}
           <div>
             <p>Logo</p>
             <h1>Impact Defi</h1>
@@ -22,6 +24,7 @@ function App() {
           </div>
         </Section>
         <Section id="section2" background={gradient.whitePurple}>
+          {/* defiSection */}
           <blockquote>
             "To change something, you must build a new model that makes the
             existing model obselete" <span>- Buckminster Fuller</span>
@@ -53,6 +56,7 @@ function App() {
           </div>
         </Section>
         <Section id="section3" background={gradient.whitePurple}>
+          {/* featuresSection */}
           <h2>Built on the mesh network</h2>
           <h3>Enhanced Security Network</h3>
           <h3>Insulation from market volatility</h3>
@@ -60,6 +64,7 @@ function App() {
           <h3>Interoperability between tradfi and defi</h3>
         </Section>
         <Section id="section4" background={gradient.whitePurple}>
+          {/* teamSection */}
           <h2>Team</h2>
           <div>
             <p>Shubham</p>
@@ -75,6 +80,7 @@ function App() {
           </div>
         </Section>
         <Section id="section5" background={gradient.whitePurple}>
+          {/* kpiSection */}
           <h3>Q1 2022</h3>
           <ul>
             <li>Tokenomics complete</li>
@@ -129,6 +135,7 @@ function App() {
           </ul>
         </Section>
         <Section id="section6" background={gradient.whitePurple}>
+          {/* countdownSection */}
           <h2>Defi 3.0 Begins Here</h2>
           <div>
             <p>Icon</p>

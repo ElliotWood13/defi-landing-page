@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { layout, mediaQuery, pxToRem, color } from '../../design'
+import { layout, mediaQuery, pxToRem, color } from '../../../design'
 
 const HeaderWrapper = styled.header`
   display: flex;
