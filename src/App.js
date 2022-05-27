@@ -10,7 +10,6 @@ import { gradient } from './design'
 // TODO: Change scroll to section to use useRef
 // TODO: Update logo192 and logo512 in index.html
 // TODO: Uninstall scrollSnapPolyfill package if not used
-// TODO: Yay, it worked! 🥳
 
 
 function App() {
