@@ -11,12 +11,9 @@ import {
   LinkItem,
   StyledLink,
 } from './navigation.styles'
-import { uid } from '../../../helpers'
 import { useScrollLock } from '../../../hooks'
 import { useWindowResize } from '../../../hooks'
 import { color } from '../../../design'
-
-// TODO: Add any hidden labels required for a11y
 
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -25,28 +22,34 @@ export const Navigation = () => {
 
   const links = [
     {
+      id: '1',
       path: '#section1',
-      name: 'Section 1',
+      name: 'Impact Defi',
     },
     {
+      id: '2',
       path: '#section2',
-      name: 'Section 2',
+      name: 'USP',
     },
     {
+      id: '3',
       path: '#section3',
-      name: 'Section 3',
+      name: 'Features',
     },
     {
+      id: '4',
       path: '#section4',
-      name: 'Section 4',
+      name: 'Team',
     },
     {
+      id: '5',
       path: '#section5',
-      name: 'Section 5',
+      name: 'Targets',
     },
     {
+      id: '6',
       path: '#section6',
-      name: 'Section 6',
+      name: 'About Us',
     },
   ]
 
@@ -82,7 +85,7 @@ export const Navigation = () => {
           <LinkList id="menu">
             {links.map((link) => (
               <LinkItem
-                key={uid()}
+                key={link.id}
               >
                 <StyledLink
                   href={link.path}

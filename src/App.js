@@ -1,13 +1,17 @@
 import React from 'react'
 import './App.css'
 // import scrollSnapPolyfill from 'css-scroll-snap-polyfill'
-import { Section } from './components/layouts/section'
 import { RegularLayout } from './components/layouts/regularLayout'
 import { Header } from './components/organisms/header'
-import { gradient } from './design'
+import { BrandSection } from './components/organisms/brandSection/brandSection'
+import { CountdownSection } from './components/organisms/countdownSection/countdownSection'
+import { DefiSection } from './components/organisms/defiSection'
+import { FeaturesSection } from './components/organisms/featuresSection'
+import { KpiSection } from './components/organisms/kpiSection/kpiSection'
+import { TeamSection } from './components/organisms/teamSection'
 
 // TODO: Think about how to space sections
-// TODO: Change scroll to section to use useRef
+// TODO: Change scroll to section to use useRef instead of ID's - make sure mobile menu works
 // TODO: Update logo192 and logo512 in index.html
 // TODO: Uninstall scrollSnapPolyfill package if not used
 
@@ -16,136 +20,12 @@ function App() {
     <>
       <Header />
       <RegularLayout>
-        <Section id="section1" background={gradient.greyBlack}>
-          {/* brandSection */}
-          <div>
-            <p>Logo</p>
-            <h1>Impact Defi</h1>
-            <h2>The future lives on the mesh</h2>
-          </div>
-        </Section>
-        <Section id="section2" background={gradient.blackGrey}>
-          {/* defiSection */}
-          <blockquote>
-            "To change something, you must build a new model that makes the
-            existing model obselete" <span>- Buckminster Fuller</span>
-          </blockquote>
-          <div>
-            <h3>Nft Staking Rewards</h3>
-            <p>
-              Option to combine up to four NFT's for up to 32% additional APY
-              boost on token staking rewards.
-            </p>
-          </div>
-          <div>
-            <h3>Donation As A Service</h3>
-            <p>
-              Launchpad, Crowdfunding suite + Green finance intended to provide
-              developers with the means to launch and give back.
-            </p>
-          </div>
-          <div>
-            <h3>Off Chain Investments</h3>
-            <p>
-              Protocol synergises real world assets with Meta, Crypto and DeFi
-              investments as part of a diversified investment strategy.
-            </p>
-          </div>
-          <div>
-            <h3>Tax Haven</h3>
-            <p>First tax haven in cryptocurrency.</p>
-          </div>
-        </Section>
-        <Section id="section3" background={gradient.greyBlack}>
-          {/* featuresSection */}
-          <h2>Built on the mesh network</h2>
-          <h3>Enhanced Security Network</h3>
-          <h3>Insulation from market volatility</h3>
-          <h3>Consistent network stability</h3>
-          <h3>Interoperability between tradfi and defi</h3>
-        </Section>
-        <Section id="section4" background={gradient.blackGrey}>
-          {/* teamSection */}
-          <h2>Team</h2>
-          <div>
-            <p>Shubham</p>
-            <p>Social Media Director</p>
-          </div>
-          <div>
-            <p>AJ</p>
-            <p>Founder and CEO</p>
-          </div>
-          <div>
-            <p>Cyborg</p>
-            <p>VP Development</p>
-          </div>
-        </Section>
-        <Section id="section5" background={gradient.greyBlack}>
-          {/* kpiSection */}
-          <h3>Q1 2022</h3>
-          <ul>
-            <li>Tokenomics complete</li>
-            <li>Tokenomics complete</li>
-            <li>Tokenomics complete</li>
-            <li>Tokenomics complete</li>
-            <li>Tokenomics complete</li>
-            <li>Tokenomics complete</li>
-            <li>Tokenomics complete</li>
-          </ul>
-
-          <h3>Q2 2022</h3>
-          <ul>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-            <li>Finalize NFT mint</li>
-          </ul>
-
-          <h3>Q3 2022</h3>
-          <ul>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-            <li>Tax haven NFT tigers launch</li>
-          </ul>
-
-          <h3>Q4 2022</h3>
-          <ul>
-            <li>Final testing and deployment of Tax Haven</li>
-            <li>Final testing and deployment of Tax Haven</li>
-            <li>Final testing and deployment of Tax Haven</li>
-          </ul>
-
-          <h3>Q1 2023</h3>
-          <ul>
-            <li>Tax haven rewards deployment</li>
-            <li>Tax haven rewards deployment</li>
-            <li>Tax haven rewards deployment</li>
-          </ul>
-        </Section>
-        <Section id="section6" background={gradient.blackGrey}>
-          {/* countdownSection */}
-          <h2>Defi 3.0 Begins Here</h2>
-          <div>
-            <p>Icon</p>
-            <p>Icon</p>
-            <p>Icon</p>
-
-            <p>Timer</p>
-          </div>
-        </Section>
+        <BrandSection />
+        <DefiSection />
+        <FeaturesSection />
+        <TeamSection />
+        <KpiSection />
+        <CountdownSection />
       </RegularLayout>
     </>
   )
