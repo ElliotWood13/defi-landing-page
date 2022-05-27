@@ -17,7 +17,7 @@ export const fontWeight = {
 }
 
 export const color = {
-  brand: '#ffc330',
+  brand: '#ffc330', // yellow
   body: '#fff',
   grey: {
     100: '#e8e7ec',

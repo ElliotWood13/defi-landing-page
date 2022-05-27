@@ -15,6 +15,7 @@ import { TeamSection } from './components/organisms/teamSection'
 // TODO: Update logo192 and logo512 in index.html
 // TODO: Uninstall scrollSnapPolyfill package if not used
 
+
 function App() {
   return (
     <>

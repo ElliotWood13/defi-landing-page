@@ -1,9 +1,6 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export const useScrollLock = (): [
-  boolean,
-  Dispatch<SetStateAction<boolean>>,
-] => {
+export const useScrollLock = () => {
   const [scrollLockActive, setScrollLockActive] = useState(false)
 
   useEffect(() => {
