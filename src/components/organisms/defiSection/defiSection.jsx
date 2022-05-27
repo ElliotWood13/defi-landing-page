@@ -1,6 +1,6 @@
 import React from 'react'
-import { Section } from './components/layouts/section'
-import { gradient } from './design'
+import { Section } from '../../layouts/section'
+import { gradient } from '../../../design'
 
 export const DefiSection = () => {
     return (
