@@ -1,0 +1,41 @@
+.section-container {
+    color: #ffffff;
+    /* ⬆ Link to design.js */
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+}
+
+.kpiSection-card {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-left: 1px solid rgba(255, 255, 0, .5);
+    /* Check colour */
+    border-bottom: 1px solid rgba(255, 255, 0, .5);
+    /* Check colour */
+}
+
+.kpiSection-card:not(:first-child) {
+    margin-top: 30px;
+}
+
+.kpiSection-card h3 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    /* font-family: font.brand; */
+    margin-bottom: 10px;
+}
+
+.kpiSection-card ul {
+    list-style: none;
+}
+
+.kpiSection-card ul li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.kpiSection-card ul li::before {
+    content: '+';
+    margin-right: 10px;
+}
