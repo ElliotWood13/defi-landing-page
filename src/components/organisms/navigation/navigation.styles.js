@@ -45,8 +45,6 @@ const Nav = styled.nav`
   ${mediaQuery.sm} {
     width: ${(props) => (props.mobileMenuOpen ? `60%` : `0`)};
     ${(props) =>
-      props.mobileMenuOpen && `border-right: 1px solid ${color.grey[300]}`};
-    ${(props) =>
       props.mobileMenuOpen &&
       `box-shadow: 0 0 0 ${pxToRem(1000)} rgba(0, 0, 0, 0.5)`};
   }
@@ -62,7 +60,7 @@ const Nav = styled.nav`
 
 const NavLogoWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   padding: ${pxToRem(24)} ${pxToRem(20)};
 
   ${mediaQuery.md} {

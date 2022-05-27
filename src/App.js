@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 // import scrollSnapPolyfill from 'css-scroll-snap-polyfill'
 import { RegularLayout } from './components/layouts/regularLayout'
 import { Header } from './components/organisms/header'

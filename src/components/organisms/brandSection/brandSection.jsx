@@ -1,15 +1,15 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
+import { BrandTagline, BrandText, BrandWrapper } from './brandSection.styles'
 
 export const BrandSection = () => {
     return (
         <Section id="section1" background={gradient.greyBlack}>
-            <div>
-                <p>Logo</p>
-                <h1>Impact Defi</h1>
-                <h2>The future lives on the mesh</h2>
-            </div>
+            <BrandWrapper>
+                <BrandText>Impact Defi</BrandText>
+                <BrandTagline>The future lives on the mesh</BrandTagline>
+            </BrandWrapper>
         </Section>
     )
 }
