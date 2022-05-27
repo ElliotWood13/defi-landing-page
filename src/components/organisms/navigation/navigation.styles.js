@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, mediaQuery, color, font, fontWeight } from '../../../design'
+import { pxToRem, mediaQuery, color, fontWeight } from '../../../design'
 import { Svg } from '../../../helpers/svgMapper'
 
 const Burger = styled.button`
@@ -40,7 +40,6 @@ const Nav = styled.nav`
   left: 0;
   overflow: hidden;
   transition: width 0.5s ease;
-  border-top-right-radius: ${pxToRem(40)};
 
   ${mediaQuery.sm} {
     width: ${(props) => (props.mobileMenuOpen ? `60%` : `0`)};
@@ -83,7 +82,6 @@ const LinkList = styled.ul`
 const LinkItem = styled.li`
   // TODO: Look at whether list is accessible as list-style-type: none removes number of options from screen reader
   list-style-type: none;
-  font-family: ${font.brand};
   color: ${color.body};
   font-weight: ${fontWeight.bold};
 

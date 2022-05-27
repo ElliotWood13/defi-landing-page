@@ -4,26 +4,24 @@ export const pxToRem = (px) => {
   return rem
 }
 
-export const font = {
-  brand: "'Lato', sans-serif",
-  body: "'Quicksand', sans-serif",
-}
+export const font = {}
 
 export const fontWeight = {
   light: '300',
   normal: '400',
   medium: '500',
-  bold: '700',
+  bold: '600',
+  heavy: '700',
 }
 
 export const color = {
-  brand: '#ffc330', // yellow
+  brand: '#fffC66',
   body: '#fff',
   grey: {
     100: '#e8e7ec',
     200: '#a1aab3',
     300: '#76848f',
-    400: '#686680',
+    400: '#b3b3b3',
     800: '#252525',
   },
   white: {

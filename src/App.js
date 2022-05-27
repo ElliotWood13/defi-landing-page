@@ -14,6 +14,7 @@ import { Navigation } from './components/organisms/navigation'
 // TODO: Change scroll to section to use useRef instead of ID's - make sure mobile menu works
 // TODO: Update logo192 and logo512 in index.html
 // TODO: Uninstall scrollSnapPolyfill package if not used
+// TODO: Better menu styles (inc Hover)
 
 function App() {
   const brandSectionRef = useRef(null)
