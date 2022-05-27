@@ -23,6 +23,7 @@ export const Navigation = () => {
   const [, setScrollLockActive] = useScrollLock()
   const [width] = useWindowResize()
 
+  // TODO: Add id's
   const links = [
     {
       path: '#section1',
