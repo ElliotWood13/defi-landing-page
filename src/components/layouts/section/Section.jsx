@@ -1,10 +1,10 @@
 import React from 'react'
 import { SectionWrapper, SectionPosition } from './section.styles'
 
-export const Section = ({ id, background, children }) => {
+export const Section = React.forwardRef(({ id, background, children }, ref) => {
   return (
-    <SectionWrapper id={id} background={background}>
+    <SectionWrapper ref={ref} background={background}>
       <SectionPosition>{children}</SectionPosition>
     </SectionWrapper>
   )
-}
+})

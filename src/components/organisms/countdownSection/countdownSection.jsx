@@ -2,9 +2,9 @@ import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 
-export const CountdownSection = () => {
+export const CountdownSection = React.forwardRef((props, ref) => {
     return (
-        <Section id="section6" background={gradient.blackGrey}>
+        <Section ref={ref} background={gradient.blackGrey}>
           <h2>Defi 3.0 Begins Here</h2>
           <div>
             <p>Icon</p>
@@ -15,4 +15,4 @@ export const CountdownSection = () => {
           </div>
         </Section>
     )
-}
+})

@@ -15,44 +15,60 @@ import { useScrollLock } from '../../../hooks'
 import { useWindowResize } from '../../../hooks'
 import { color } from '../../../design'
 
-export const Navigation = () => {
+export const Navigation = React.forwardRef((props, ref) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [, setScrollLockActive] = useScrollLock()
   const [width] = useWindowResize()
+  const {
+    brandSectionRef,
+    uspSectionRef,
+    featuresSectionRef,
+    teamSectionRef,
+    targetsSectionRef,
+    countdownSectionRef,
+  } = ref.current
 
-  // TODO: Add id's
+  const handleScroll = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
+  
   const links = [
     {
       id: '1',
-      path: '#section1',
       name: 'Impact Defi',
+      ref: brandSectionRef,
     },
     {
       id: '2',
-      path: '#section2',
       name: 'USP',
+      ref: uspSectionRef,
     },
     {
       id: '3',
-      path: '#section3',
       name: 'Features',
+      ref: featuresSectionRef,
     },
     {
       id: '4',
-      path: '#section4',
       name: 'Team',
+      ref: teamSectionRef,
     },
     {
       id: '5',
-      path: '#section5',
       name: 'Targets',
+      ref: targetsSectionRef,
     },
     {
       id: '6',
-      path: '#section6',
       name: 'About Us',
+      ref: countdownSectionRef,
     },
   ]
+  console.log(links);
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -89,8 +105,11 @@ export const Navigation = () => {
                 key={link.id}
               >
                 <StyledLink
-                  href={link.path}
-                  onClick={() => setMobileMenuOpen(false)}
+                  href='#'
+                  onClick={() => { 
+                    handleScroll(link.ref)
+                    setMobileMenuOpen(false)
+                  }}
                 >
                   {link.name}
                 </StyledLink>
@@ -101,4 +120,4 @@ export const Navigation = () => {
       </FocusTrap>
     </>
   )
-}
+})

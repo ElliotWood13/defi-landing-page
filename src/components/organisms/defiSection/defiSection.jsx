@@ -2,9 +2,9 @@ import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 
-export const DefiSection = () => {
+export const DefiSection = React.forwardRef((props, ref) => {
     return (
-      <Section id="section2" background={gradient.blackGrey}>
+      <Section ref={ref} background={gradient.blackGrey}>
         <blockquote>
           "To change something, you must build a new model that makes the
           existing model obselete" <span>- Buckminster Fuller</span>
@@ -36,4 +36,4 @@ export const DefiSection = () => {
         </div>
       </Section>
     )
-}
+})

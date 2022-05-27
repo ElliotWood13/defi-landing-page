@@ -2,9 +2,9 @@ import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 
-export const TeamSection = () => {
+export const TeamSection = React.forwardRef((props, ref) => {
     return (
-      <Section id="section4" background={gradient.blackGrey}>
+      <Section ref={ref} background={gradient.blackGrey}>
         <h2>Team</h2>
         <div>
           <p>Shubham</p>
@@ -20,4 +20,4 @@ export const TeamSection = () => {
         </div>
       </Section>
     )
-}
+})

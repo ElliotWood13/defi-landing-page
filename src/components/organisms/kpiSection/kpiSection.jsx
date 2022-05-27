@@ -2,9 +2,9 @@ import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 
-export const KpiSection = () => {
+export const KpiSection = React.forwardRef((props, ref) => {
     return (
-      <Section id="section5" background={gradient.greyBlack}>
+      <Section ref={ref} background={gradient.greyBlack}>
         <h3>Q1 2022</h3>
         <ul>
           <li>Tokenomics complete</li>
@@ -59,4 +59,4 @@ export const KpiSection = () => {
         </ul>
       </Section>
     )
-}
+})

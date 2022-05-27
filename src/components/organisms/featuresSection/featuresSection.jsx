@@ -2,9 +2,9 @@ import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 
-export const FeaturesSection = () => {
+export const FeaturesSection = React.forwardRef((props, ref) => {
     return (
-      <Section id="section3" background={gradient.greyBlack}>
+      <Section ref={ref} background={gradient.greyBlack}>
         <h2>Built on the mesh network</h2>
         <h3>Enhanced Security Network</h3>
         <h3>Insulation from market volatility</h3>
@@ -12,4 +12,4 @@ export const FeaturesSection = () => {
         <h3>Interoperability between tradfi and defi</h3>
       </Section>
     )
-}
+})
