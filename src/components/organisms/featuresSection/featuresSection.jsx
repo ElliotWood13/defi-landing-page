@@ -6,6 +6,8 @@ import Circle from './Circle'
 
 import './featuresSection.css'
 
+// TODO: Make 'color' prop effect Circle component's colour
+
 export const FeaturesSection = React.forwardRef((props, ref) => {
   return (
     <Section ref={ref} background={gradient.greyBlack}>
