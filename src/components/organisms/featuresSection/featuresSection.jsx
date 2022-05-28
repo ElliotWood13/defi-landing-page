@@ -14,7 +14,8 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
 
           {/* Test Circle Component */}
           {/* <Circle
-            color="yellow"
+            color="white"
+            header="Header"
           /> */}
 
           <HeaderContainer>
@@ -23,6 +24,27 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
             </FeaturesSectionHeader>
           </HeaderContainer>
 
+          <Circle
+            color="white"
+            header="Enhanced Security Network"
+          />
+
+          <Circle
+            color="white"
+            header="Insulation from market volatility"
+          />
+
+          <Circle
+            color="white"
+            header="Consistent network stability"
+          />
+
+          <Circle
+            color="white"
+            header="Interoperability between tradfi and defi"
+          />
+
+          {/*  
           <div className="circle circle-white">
             <div className="circle__inner-shadow inner-shadow--white"></div>
             <h3 className="circle__header">Enhanced Security Network</h3>
@@ -42,6 +64,7 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
             <div className="circle__inner-shadow inner-shadow--white"></div>
             <h3 className="circle__header">Interoperability between tradfi and defi</h3>
           </div>
+          */}
 
         </FeaturesSectionGrid>
       </FeaturesSectionContainer>
