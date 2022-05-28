@@ -1,0 +1,31 @@
+.container {
+    /* background-color: red; */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 20px;
+    /* grid-template-areas: "quote", "circle", "circle", "circle", "circle"; */
+}
+
+.blockquote {
+    background: linear-gradient(to bottom, lightgray, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0 20px;
+}
+
+.blockquote__name {
+    color: blue;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 16px;
+}
