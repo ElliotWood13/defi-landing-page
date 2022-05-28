@@ -33,6 +33,8 @@ const DefiSectionGrid = styled.div`
 `
 
 const HeaderContainer = styled.div`
+  background-color: transparent; 
+
   display: flex;
   justify-content: center;
   align-items: center;
