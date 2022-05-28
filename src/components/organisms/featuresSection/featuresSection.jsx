@@ -14,12 +14,6 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
       <FeaturesSectionContainer>
         <FeaturesSectionGrid>
 
-          {/* Test Circle Component */}
-          {/* <Circle
-            color="white"
-            header="Header"
-          /> */}
-
           <HeaderContainer>
             <FeaturesSectionHeader>
               <FeaturesSectionHeaderH2>Built on the mesh network</FeaturesSectionHeaderH2>

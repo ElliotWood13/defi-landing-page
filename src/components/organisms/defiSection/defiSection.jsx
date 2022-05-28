@@ -18,7 +18,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
           <HeaderContainer>
             <Blockquote>
               "To change something, you must build a new model that makes the
-              existing model obselete" <BlockquoteName>- Buckminster Fuller</BlockquoteName>
+              existing model obsolete" <BlockquoteName>- Buckminster Fuller</BlockquoteName>
             </Blockquote>
           </HeaderContainer>
 

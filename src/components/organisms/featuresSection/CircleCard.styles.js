@@ -4,8 +4,8 @@ import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
 // TODO: Convert to pxToRem, color, fontWeight & add mediaQuery(?)
 
 const CircleCard = styled.div`
-    width: 300px;
-    height: 300px;
+    width: ${pxToRem(300)};
+    height: ${pxToRem(300)};
     border-radius: 50%;
     margin: 0 auto;
     display: flex;
@@ -16,8 +16,8 @@ const CircleCard = styled.div`
     position: relative;
 
     color: white; /* Remove */
-    border: 2px solid rgb(252, 252, 233); /* Remove */
-    box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5); /* Remove */
+    border: ${pxToRem(2)} solid rgb(252, 252, 233); /* Remove */
+    box-shadow: 0 0 ${pxToRem(20)} rgba(255, 255, 255, .5), 0 0 ${pxToRem(20)} rgba(255, 255, 255, .5); /* Remove */
 `
 
 const CircleCardInnerShadow = styled.div`
@@ -29,27 +29,27 @@ const CircleCardInnerShadow = styled.div`
     border-radius: 50%;
     background-color: transparent;
 
-    box-shadow: 5px 10px 20px 5px rgba(255, 255, 255, .5) inset; /* Remove */
+    box-shadow: ${pxToRem(5)} ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(5)} rgba(255, 255, 255, .5) inset; /* Remove */
 `
 
 const CircleHeaderH3 = styled.h3`
     background-color: rgba(0, 0, 0, .8); /* FOR YELLOW CIRCLES ONLY? */
     background-color: transparent; /* FOR WHITE CIRCLES ONLY? */
     color: white;
-    font-size: 24px;
+    font-size: ${pxToRem(24)};
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
-    padding: 3px;
+    padding: ${pxToRem(3)};
     z-index: 10;
 `
 
 const CircleText = styled.p`
     color: white;
     text-align: center;
-    font-size: 18px;
+    font-size: ${pxToRem(18)};
     font-weight: 300;
-    margin: 20px;
+    margin: ${pxToRem(20)};
     z-index: 10;
 `
 
