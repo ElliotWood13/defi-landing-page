@@ -10,8 +10,10 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
       <div className="container">
         <div className="grid">
 
-          <div className="featuresSection__header">
-            <h2>Built on the mesh network</h2>
+          <div className="header-container">
+            <div className="featuresSection__header">
+              <h2>Built on the mesh network</h2>
+            </div>
           </div>
 
           <div className="circle circle-white">

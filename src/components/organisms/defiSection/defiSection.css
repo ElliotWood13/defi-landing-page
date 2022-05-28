@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(1, auto);
@@ -8,6 +13,12 @@
 
 
 /* BLOCKQUOTE */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .blockquote {
     background: linear-gradient(to bottom, lightgray, gray);
     background-clip: text;
@@ -19,6 +30,7 @@
     text-transform: uppercase;
     line-height: 1.1;
     margin: 0 20px;
+    max-width: 300px;
 }
 
 .blockquote__name {
@@ -82,4 +94,33 @@
     font-weight: 300;
     margin: 20px;
     z-index: 10;
+}
+
+
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .header-container {
+        grid-column: 1 / 3;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .header-container {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        height: 100%;
+
+    }
 }

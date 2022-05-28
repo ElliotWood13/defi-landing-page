@@ -20,10 +20,12 @@ export const DefiSection = React.forwardRef((props, ref) => {
       <div className="container">
         <div className="grid">
 
-          <blockquote className="blockquote">
-            "To change something, you must build a new model that makes the
-            existing model obselete" <span className="blockquote__name">- Buckminster Fuller</span>
-          </blockquote>
+          <div className="header-container">
+            <blockquote className="blockquote">
+              "To change something, you must build a new model that makes the
+              existing model obselete" <span className="blockquote__name">- Buckminster Fuller</span>
+            </blockquote>
+          </div>
 
           <div className="circle circle-yellow">
             <div className="circle__inner-shadow inner-shadow--yellow"></div>
