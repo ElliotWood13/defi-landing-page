@@ -33,23 +33,27 @@ export const DefiSection = React.forwardRef((props, ref) => {
             </p>
           </div>
 
-          <div>
-            <h3>Donation As A Service</h3>
-            <p>
+          <div className="circle">
+            <h3 className="circle__header">Donation As A Service</h3>
+            <p className="circle__text">
               Launchpad, Crowdfunding suite + Green finance intended to provide
               developers with the means to launch and give back.
             </p>
           </div>
-          <div>
-            <h3>Off Chain Investments</h3>
-            <p>
+
+          <div className="circle">
+            <h3 className="circle__header">Off Chain Investments</h3>
+            <p className="circle__text">
               Protocol synergises real world assets with Meta, Crypto and DeFi
               investments as part of a diversified investment strategy.
             </p>
           </div>
-          <div>
-            <h3>Tax Haven</h3>
-            <p>First tax haven in cryptocurrency.</p>
+
+          <div className="circle">
+            <h3 className="circle__header">Tax Haven</h3>
+            <p className="circle__text">
+              First tax haven in cryptocurrency.
+            </p>
           </div>
 
         </div>
