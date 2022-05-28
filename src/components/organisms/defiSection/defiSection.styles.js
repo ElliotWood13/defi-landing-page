@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
 
-// TODO: Use pxToRem
+// TODO: Use pxToRem ✅
 
 const DefiSectionContainer = styled.div`
   display: flex;
@@ -12,16 +12,16 @@ const DefiSectionGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(5, auto);
-  grid-gap: 50px;
+  grid-gap: ${pxToRem(50)};
   /* grid-template-areas: "quote", "circle", "circle", "circle", "circle"; */
 
   ${mediaQuery.sm} {
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(2, ${pxToRem(300)});
     grid-template-rows: repeat(3, auto);
   }
 
   ${mediaQuery.md} {
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, ${pxToRem(300)});
     grid-template-rows: repeat(2, auto);
   }
 `
@@ -48,28 +48,28 @@ const Blockquote = styled.blockquote`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  font-size: 40px;
+  font-size: ${pxToRem(40)};
   text-align: center;
   text-transform: uppercase;
   line-height: 1.1;
-  margin: 0 20px;
+  margin: 0 ${pxToRem(20)};
 
   ${mediaQuery.md} {
-    max-width: 300px;
+    max-width: ${pxToRem(300)};
   }
 `
 
 const BlockquoteName = styled.span`
   color: blue;
   display: block;
-  font-size: 18px;
+  font-size: ${pxToRem(18)};
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: ${pxToRem(16)};
 `
 
 const Circle = styled.div`
-  width: 300px;
-  height: 300px;
+  width: ${pxToRem(300)};
+  height: ${pxToRem(300)};
   border-radius: 50%;
   margin: 0 auto;
   display: flex;
@@ -78,7 +78,7 @@ const Circle = styled.div`
   align-items: center;
   background-color: transparent;
   position: relative;
-  border: 2px solid rgb(252, 252, 233);
+  border: ${pxToRem(2)} solid rgb(252, 252, 233);
   box-shadow: ${shadow.yellowOuter};
 `
 
