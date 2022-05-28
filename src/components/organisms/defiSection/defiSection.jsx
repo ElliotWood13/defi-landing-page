@@ -26,6 +26,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
           </blockquote>
 
           <div className="circle circle-yellow">
+            <div className="circle__inner-shadow inner-shadow--yellow"></div>
             <h3 className="circle__header">Nft Staking Rewards</h3>
             <p className="circle__text">
               Option to combine up to four NFT's for up to 32% additional APY
@@ -34,6 +35,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
           </div>
 
           <div className="circle circle-yellow">
+            <div className="circle__inner-shadow inner-shadow--yellow"></div>
             <h3 className="circle__header">Donation As A Service</h3>
             <p className="circle__text">
               Launchpad, Crowdfunding suite + Green finance intended to provide
@@ -42,6 +44,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
           </div>
 
           <div className="circle circle-yellow">
+            <div className="circle__inner-shadow inner-shadow--yellow"></div>
             <h3 className="circle__header">Off Chain Investments</h3>
             <p className="circle__text">
               Protocol synergises real world assets with Meta, Crypto and DeFi
@@ -50,6 +53,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
           </div>
 
           <div className="circle circle-yellow">
+            <div className="circle__inner-shadow inner-shadow--yellow"></div>
             <h3 className="circle__header">Tax Haven</h3>
             <p className="circle__text">
               First tax haven in cryptocurrency.

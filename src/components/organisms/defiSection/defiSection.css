@@ -41,6 +41,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    position: relative;
+}
+
+.circle__inner-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.inner-shadow--yellow {
+    box-shadow: 5px 10px 20px 5px rgba(255, 255, 0, .5) inset;
 }
 
 .circle-yellow {
@@ -57,6 +73,7 @@
     text-transform: uppercase;
     text-align: center;
     padding: 3px;
+    z-index: 10;
 }
 
 .circle__text {
@@ -65,4 +82,5 @@
     font-size: 18px;
     font-weight: 300;
     margin: 20px;
+    z-index: 10;
 }

@@ -3,11 +3,19 @@
     box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);
 }
 
+.inner-shadow--white {
+    box-shadow: 5px 10px 20px 5px rgba(255, 255, 255, .5) inset;
+}
+
 .circle-white .circle__header {
     background-color: transparent;
 }
 
 .featuresSection__header {
+    box-shadow: 3px 5px 20px 5px rgba(255, 255, 255, .5) inset;
+}
+
+.featuresSection__header h2 {
     background: linear-gradient(to right, lightgray, gray);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
