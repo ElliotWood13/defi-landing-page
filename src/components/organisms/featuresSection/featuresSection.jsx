@@ -2,7 +2,7 @@ import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 import { FeaturesSectionContainer, FeaturesSectionGrid, HeaderContainer, FeaturesSectionHeader, FeaturesSectionHeaderH2 } from './featuresSection.styles'
-
+import Circle from './Circle'
 
 import './featuresSection.css'
 
@@ -11,6 +11,11 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
     <Section ref={ref} background={gradient.greyBlack}>
       <FeaturesSectionContainer>
         <FeaturesSectionGrid>
+
+          {/* Test Circle Component */}
+          {/* <Circle
+            color="yellow"
+          /> */}
 
           <HeaderContainer>
             <FeaturesSectionHeader>
