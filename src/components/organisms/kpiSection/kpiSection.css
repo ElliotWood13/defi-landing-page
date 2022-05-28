@@ -3,6 +3,7 @@
     /* ⬆ Link to design.js */
     display: grid;
     grid-template-columns: repeat(1, 100%);
+
 }
 
 .kpiSection-card {
@@ -12,6 +13,8 @@
     /* Check colour */
     border-bottom: 1px solid rgba(255, 255, 0, .5);
     /* Check colour */
+    width: 100%;
+    margin: 0 auto;
 }
 
 .kpiSection-card:not(:first-child) {
@@ -38,4 +41,30 @@
 .kpiSection-card ul li::before {
     content: '+';
     margin-right: 10px;
+}
+
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 375px) {
+    .kpiSection-card {
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-container {
+        grid-template-columns: repeat(2, 20rem);
+        grid-gap: 10px;
+    }
+
+    .kpiSection-card:not(:first-child) {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-container {
+        grid-template-columns: repeat(4, 15rem);
+    }
 }
