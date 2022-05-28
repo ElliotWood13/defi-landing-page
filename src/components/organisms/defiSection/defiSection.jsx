@@ -4,14 +4,14 @@ import { gradient } from '../../../design'
 
 import './defiSection.css'
 
-// TODO: Create grid layout
+// TODO: Create grid layout ✅
 // TODO: Assign grid placement
 /* TODO: Responsiveness 
   sm - stacked 1 col, quote on top
   md - stacked, quote on top, 2 cols for circles
   lg - 3 cols, quote in middle, 2 rows for circles
 */
-// TODO: Style circles
+// TODO: Style circles ✅
 // TODO: Create circle component
 
 export const DefiSection = React.forwardRef((props, ref) => {
@@ -25,7 +25,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
             existing model obselete" <span className="blockquote__name">- Buckminster Fuller</span>
           </blockquote>
 
-          <div className="circle">
+          <div className="circle circle-yellow">
             <h3 className="circle__header">Nft Staking Rewards</h3>
             <p className="circle__text">
               Option to combine up to four NFT's for up to 32% additional APY
@@ -33,7 +33,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
             </p>
           </div>
 
-          <div className="circle">
+          <div className="circle circle-yellow">
             <h3 className="circle__header">Donation As A Service</h3>
             <p className="circle__text">
               Launchpad, Crowdfunding suite + Green finance intended to provide
@@ -41,7 +41,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
             </p>
           </div>
 
-          <div className="circle">
+          <div className="circle circle-yellow">
             <h3 className="circle__header">Off Chain Investments</h3>
             <p className="circle__text">
               Protocol synergises real world assets with Meta, Crypto and DeFi
@@ -49,7 +49,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
             </p>
           </div>
 
-          <div className="circle">
+          <div className="circle circle-yellow">
             <h3 className="circle__header">Tax Haven</h3>
             <p className="circle__text">
               First tax haven in cryptocurrency.

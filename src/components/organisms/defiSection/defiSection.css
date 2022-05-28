@@ -41,6 +41,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.circle-yellow {
     border: 2px solid rgb(252, 252, 233);
     box-shadow: 0 0 20px rgba(255, 255, 0, .5), 0 0 20px rgba(255, 255, 0, .5);
 }

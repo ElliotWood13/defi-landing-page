@@ -1,0 +1,26 @@
+.circle-white {
+    border: 2px solid rgb(252, 252, 233);
+    box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.circle-white .circle__header {
+    background-color: transparent;
+}
+
+.featuresSection__header {
+    background: linear-gradient(to right, lightgray, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+
+    border: 2px solid rgb(252, 252, 233);
+    box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);
+    border-radius: 3px;
+}
