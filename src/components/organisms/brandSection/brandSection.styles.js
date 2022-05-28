@@ -8,8 +8,8 @@ const BrandWrapper = styled.div`
 `
 
 const GridImage = styled.img`
-  height: ${pxToRem(372)};
-  width: ${pxToRem(264)};
+  height: ${pxToRem(436)};
+  width: ${pxToRem(360)};
   position: absolute;
   top: 38%;
   right: 50%;
@@ -17,18 +17,19 @@ const GridImage = styled.img`
 
   ${mediaQuery.xxs} {
     top: 40%;
-    width: ${pxToRem(312)};
+    height: ${pxToRem(516)};
+    width: ${pxToRem(472)};
   }
 
   ${mediaQuery.xs} {
     top: 44%;
-    height: ${pxToRem(388)};
-    width: ${pxToRem(392)};
+    height: ${pxToRem(644)};
+    width: ${pxToRem(600)};
   }
 
   ${mediaQuery.sm} {
-    height: ${pxToRem(516)};
-    width: ${pxToRem(488)};
+    height: ${pxToRem(708)};
+    width: ${pxToRem(712)};
   }
 `
 
@@ -49,8 +50,8 @@ const LogoImage = styled.img`
   }
 
   ${mediaQuery.sm} {
-    height: ${pxToRem(556)};
-    width: ${pxToRem(508)};
+    height: ${pxToRem(476)};
+    width: ${pxToRem(428)};
   }
 `
 
