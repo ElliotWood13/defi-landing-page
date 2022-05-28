@@ -26,25 +26,10 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
             </FeaturesSectionHeader>
           </HeaderContainer>
 
-          <Circle
-            color="white"
-            header="Enhanced Security Network"
-          />
-
-          <Circle
-            color="white"
-            header="Insulation from market volatility"
-          />
-
-          <Circle
-            color="white"
-            header="Consistent network stability"
-          />
-
-          <Circle
-            color="white"
-            header="Interoperability between tradfi and defi"
-          />
+          <Circle color="white" header="Enhanced Security Network" />
+          <Circle color="white" header="Insulation from market volatility" />
+          <Circle color="white" header="Consistent network stability" />
+          <Circle color="white" header="Interoperability between tradfi and defi" />
 
           {/*  
           <div className="circle circle-white">
