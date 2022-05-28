@@ -1,7 +1,6 @@
 .container {
     display: flex;
     justify-content: center;
-    position: relative;
 }
 
 .grid {
@@ -15,12 +14,9 @@
 
 /* BLOCKQUOTE */
 .header-container {
-    background-color: black;
-    /* Check background-color (linear-gradient?) */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
 }
 
 .blockquote {
