@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
 
 // TODO: Use pxToRem ✅
+// TODO: Check grid (not changing to 300px 500px 300px on mediaQuery.lg)
 
 const DefiSectionContainer = styled.div`
   display: flex;
@@ -22,6 +23,11 @@ const DefiSectionGrid = styled.div`
 
   ${mediaQuery.md} {
     grid-template-columns: repeat(3, ${pxToRem(300)});
+    grid-template-rows: repeat(2, auto);
+  }
+
+  ${mediaQuery.lg} {
+    grid-template-columns: ${pxToRem(300)} ${pxToRem(500)} ${pxToRem(300)};
     grid-template-rows: repeat(2, auto);
   }
 `

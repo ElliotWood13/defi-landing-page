@@ -4,17 +4,10 @@ import { gradient } from '../../../design'
 import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, Circle, CircleInnerShadow } from './defiSection.styles'
 import './defiSection.css'
 
-// TODO: Create grid layout ✅
-// TODO: Assign grid placement
-/* TODO: Responsiveness 
-  sm - stacked 1 col, quote on top
-  md - stacked, quote on top, 2 cols for circles
-  lg - 3 cols, quote in middle, 2 rows for circles
-*/
-// TODO: Style circles ✅
 // TODO: Create circle component
 
-// TODO: Elliot Question for Dan - can CircleInnerShadow be an after element on Circle? (I don't know the answer at this point)
+// TODO: Elliot Question for Dan (READ BY DAN 👍) - can CircleInnerShadow be an after element on Circle? (I don't know the answer at this point) 
+// ANSWER: Tried ::before but z-index was a problem - will double-check
 
 export const DefiSection = React.forwardRef((props, ref) => {
   return (
@@ -39,7 +32,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
           </Circle>
 
           <Circle>
-          <CircleInnerShadow />
+            <CircleInnerShadow />
             <h3 className="circle__header">Donation As A Service</h3>
             <p className="circle__text">
               Launchpad, Crowdfunding suite + Green finance intended to provide

@@ -1,20 +1,22 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
+import { FeaturesSectionContainer, FeaturesSectionGrid, HeaderContainer, FeaturesSectionHeader, FeaturesSectionHeaderH2 } from './featuresSection.styles'
+
 
 import './featuresSection.css'
 
 export const FeaturesSection = React.forwardRef((props, ref) => {
   return (
     <Section ref={ref} background={gradient.greyBlack}>
-      <div className="container">
-        <div className="grid">
+      <FeaturesSectionContainer>
+        <FeaturesSectionGrid>
 
-          <div className="header-container">
-            <div className="featuresSection__header">
-              <h2>Built on the mesh network</h2>
-            </div>
-          </div>
+          <HeaderContainer>
+            <FeaturesSectionHeader>
+              <FeaturesSectionHeaderH2>Built on the mesh network</FeaturesSectionHeaderH2>
+            </FeaturesSectionHeader>
+          </HeaderContainer>
 
           <div className="circle circle-white">
             <div className="circle__inner-shadow inner-shadow--white"></div>
@@ -36,8 +38,8 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
             <h3 className="circle__header">Interoperability between tradfi and defi</h3>
           </div>
 
-        </div>
-      </div>
+        </FeaturesSectionGrid>
+      </FeaturesSectionContainer>
     </Section>
   )
 })
