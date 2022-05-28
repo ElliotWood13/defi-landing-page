@@ -37,7 +37,10 @@ export const borderRadius = {
   medium: '8px',
 }
 
-export const shadow = {}
+export const shadow = {
+  yellowOuter: `0 0 20px rgba(255, 255, 0, .5), 0 0 20px rgba(255, 255, 0, .5);`,
+  yellowInner: `5px 10px 20px 5px rgba(255, 255, 0, .5) inset;`,
+}
 
 export const gradient = {
   greyBlack: `linear-gradient(90deg, rgba(51,50,59,1) 0%, rgba(0,0,0,1) 25%);`,
