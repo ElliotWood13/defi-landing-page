@@ -5,6 +5,8 @@ const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 `
 
 const SectionGrid = styled.div`
@@ -26,6 +28,7 @@ const SectionGrid = styled.div`
     ${mediaQuery.lg} {
         grid-template-columns: repeat(4, 17rem);
         grid-gap: 50px;
+        row-gap: 100px;
     }
 `
 
@@ -79,10 +82,29 @@ const KpiSectionCardUl = styled.ul`
 const KpiSectionCardLi = styled.li`
     font-size: 16px;
     line-height: 1.5;
+    color: lightgray;
 
     &:before {
         content: '+';
         margin-right: 10px;
+    }
+`
+
+const KpiSectionImage = styled.img`
+    opacity: .4;
+    position: absolute;
+
+    ${mediaQuery.xxxs} {
+        // height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    ${mediaQuery.md} {
+        // width: 80%;
+        bottom: 0;
+        left: 0;
+        opacity: .9;
     }
 `
 
@@ -93,4 +115,5 @@ export {
     KpiSectionCardHeader,
     KpiSectionCardUl,
     KpiSectionCardLi,
+    KpiSectionImage,
 }

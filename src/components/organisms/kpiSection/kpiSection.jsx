@@ -1,19 +1,22 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { SectionContainer, SectionGrid, KpiSectionCard, KpiSectionCardHeader, KpiSectionCardUl, KpiSectionCardLi } from './kpiSection.styles'
+import { SectionContainer, SectionGrid, KpiSectionCard, KpiSectionCardHeader, KpiSectionCardUl, KpiSectionCardLi, KpiSectionImage } from './kpiSection.styles'
+import middleSectionImage from '../../../images/middle-section.png'
 
 import './kpiSection.css'
 import StyledComponents from 'styled-components'
+
 import Data from './kpiData'
 
-// TODO: Make Card component for each "kpiSection-card"
-// TODO: Map of data and return Card component
 
 export const KpiSection = React.forwardRef((props, ref) => {
   return (
     <Section ref={ref} background={gradient.greyBlack}>
       <SectionContainer>
+
+        <KpiSectionImage src={middleSectionImage} />
+
         <SectionGrid>
 
           {Data.map(({ id, title, listItems }) => (
