@@ -8,7 +8,7 @@ import Circle from '../featuresSection/Circle' /* Change path when moved to modu
 
 export const CountdownSection = React.forwardRef((props, ref) => {
   return (
-    <Section ref={ref} background={gradient.blackGrey}>
+    <Section ref={ref} background={gradient.greyBlack}>
 
       <Circle color="yellow" />
 

@@ -14,7 +14,7 @@ import './defiSection.css'
 
 export const DefiSection = React.forwardRef((props, ref) => {
   return (
-    <Section ref={ref} background={gradient.blackGrey}>
+    <Section ref={ref} background={gradient.greyBlack}>
       <DefiSectionContainer>
 
         {/* <GridImage
