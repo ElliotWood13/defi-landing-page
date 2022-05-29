@@ -4,8 +4,10 @@ import { gradient } from '../../../design'
 import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, CircleCard, CircleInnerShadow } from './defiSection.styles'
 
 import Circle from '../featuresSection/Circle'
+// import glowContainer from '../../molecules/glowContainer'
 
 import { GridImage } from '../brandSection/brandSection.styles'
+import LinesImage from '../../../images/middle-lines.png'
 
 import './defiSection.css'
 
@@ -31,6 +33,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
               existing model obsolete" <BlockquoteName>- Buckminster Fuller</BlockquoteName>
             </Blockquote>
           </HeaderContainer>
+
 
           <Circle color="yellow" header="Nft Staking Rewards" text="Option to combine up to four NFT's for up to 32% additional APY
               boost on token staking rewards." />

@@ -41,6 +41,8 @@ export const borderRadius = {
 export const shadow = {
   yellowOuter: `0 0 20px rgba(255, 255, 0, .5), 0 0 20px rgba(255, 255, 0, .5);`,
   yellowInner: `5px 10px 20px 5px rgba(255, 255, 0, .5) inset;`,
+  whiteOuter: `0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);`,
+  whiteInner: `5px 10px 20px 5px rgba(255, 255, 255, .5) inset;`,
 }
 
 export const gradient = {

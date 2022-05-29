@@ -16,12 +16,12 @@ const CircleCard = styled.div`
   background-color: transparent;
   position: relative;
 
-  color: white; /* Remove */
-  border: ${pxToRem(2)} solid rgb(252, 252, 233); /* Remove */
+  color: white;
+  border: ${pxToRem(2)} solid rgb(252, 252, 233); 
   box-shadow: 0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5),
     0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5); /* Remove */
 
-  border: 1px solid ${(color) => color === 'yellow' ? 'yellow' : 'white'};
+  border: 1px solid ${({ color }) => color === 'yellow' ? `${shadow.yellowOuter}` : `${shadow.whiteOuter}`};
 
 `
 
@@ -34,29 +34,29 @@ const CircleCardInnerShadow = styled.div`
   border-radius: 50%;
   background-color: transparent;
 
-  box-shadow: ${pxToRem(5)} ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(5)}
-    rgba(255, 255, 255, 0.5) inset; /* Remove */
+  box-shadow: ${({ color }) => color === 'yellow' ? `${shadow.yellowInner}` : `${shadow.whiteInner}`};
 `
 
 const CircleHeaderH3 = styled.h3`
-  background-color: rgba(0, 0, 0, 0.8); /* FOR YELLOW CIRCLES ONLY? */
-  background-color: transparent; /* FOR WHITE CIRCLES ONLY? */
-  color: white;
-  font-size: ${pxToRem(24)};
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  padding: ${pxToRem(3)};
-  z-index: 10;
+// background-color: rgba(0, 0, 0, 0.8);
+// background-color: transparent;
+color: white;
+font-size: ${pxToRem(24)};
+font-weight: 400;
+text-transform: uppercase;
+text-align: center;
+padding: ${pxToRem(3)};
+z-index: 10;
+text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 55px #000, 0 0 75px #000;
 `
 
 const CircleText = styled.p`
-  color: white;
-  text-align: center;
-  font-size: ${pxToRem(18)};
-  font-weight: 300;
-  margin: ${pxToRem(20)};
-  z-index: 10;
+color: white;
+text-align: center;
+font-size: ${pxToRem(18)};
+font-weight: 300;
+margin: ${pxToRem(20)};
+z-index: 10;
 `
 
 export { CircleCard, CircleCardInnerShadow, CircleHeaderH3, CircleText }
