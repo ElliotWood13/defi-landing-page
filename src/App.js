@@ -33,9 +33,9 @@ function App() {
   })
   return (
     <>
-      <Header>
+      {/* <Header>
         <Navigation ref={refs} />
-      </Header>
+      </Header> */}
       <RegularLayout>
         <BrandSection ref={brandSectionRef} />
         <DefiSection ref={uspSectionRef} />
