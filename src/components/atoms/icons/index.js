@@ -1,2 +1,5 @@
 export { Close } from './close'
 export { Burger } from './burger'
+export { Discord } from './discord'
+export { Twitter } from './twitter'
+export { Medium } from './medium'
