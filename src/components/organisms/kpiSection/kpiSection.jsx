@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { SectionContainer } from './kpiSection.styles'
+import { SectionContainer, KpiSectionCard, KpiSectionCardHeader, KpiSectionCardUl, KpiSectionCardLi } from './kpiSection.styles'
 
 import './kpiSection.css'
 import StyledComponents from 'styled-components'
@@ -11,23 +11,34 @@ import Data from './kpiData'
 // TODO: Map of data and return Card component
 
 export const KpiSection = React.forwardRef((props, ref) => {
-
   return (
     <Section ref={ref} background={gradient.greyBlack}>
       <SectionContainer>
 
-        <div className="kpiSection-card">
-          <h3 className="kpiSection__h3">Q1 2022</h3>
-          <ul>
-            <li>Tokenomics complete.</li>
-            <li>Brand guidelines established.</li>
-            <li>Light paper + road map updated.</li>
-            <li>NFT artist development of concept.</li>
-            <li>Hiring for key board positions.</li>
-            <li>Finalising marketing strategy.</li>
-            <li>Legal documentation released.</li>
-          </ul>
-        </div>
+        {Data.map(({ id, title, listItems }) => (
+          <KpiSectionCard key={id}>
+            <KpiSectionCardHeader>{title}</KpiSectionCardHeader>
+            <KpiSectionCardUl>
+              {listItems.map(item => (
+                <KpiSectionCardLi>{item}</KpiSectionCardLi>
+              ))}
+            </KpiSectionCardUl>
+          </KpiSectionCard>
+        ))}
+
+        {/* 
+        <KpiSectionCard>
+          <KpiSectionCardHeader>Q1 2022</KpiSectionCardHeader>
+          <KpiSectionCardUl>
+            <KpiSectionCardLi>Tokenomics complete.</KpiSectionCardLi>
+            <KpiSectionCardLi>Brand guideKpiSectionCardLines estabKpiSectionCardLished.</KpiSectionCardLi>
+            <KpiSectionCardLi>KpiSectionCardLight paper + road map updated.</KpiSectionCardLi>
+            <KpiSectionCardLi>NFT artist development of concept.</KpiSectionCardLi>
+            <KpiSectionCardLi>Hiring for key board positions.</KpiSectionCardLi>
+            <KpiSectionCardLi>FinaKpiSectionCardLising marketing strategy.</KpiSectionCardLi>
+            <KpiSectionCardLi>Legal documentation released.</KpiSectionCardLi>
+          </KpiSectionCardUl>
+        </KpiSectionCard>
 
         <div className="kpiSection-card">
           <h3>Q2 2022</h3>
@@ -82,6 +93,7 @@ export const KpiSection = React.forwardRef((props, ref) => {
             <li>Announcement of new ecosystem additions.</li>
           </ul>
         </div>
+        */}
 
       </SectionContainer>
     </Section >
