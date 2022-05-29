@@ -6,7 +6,7 @@ import Circle from './Circle'
 
 import './featuresSection.css'
 
-// TODO: Make 'color' prop effect Circle component's colour
+// TODO: Make 'color' prop affect Circle component's colour
 
 export const FeaturesSection = React.forwardRef((props, ref) => {
   return (

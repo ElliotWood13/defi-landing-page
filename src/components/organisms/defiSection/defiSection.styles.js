@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
 
-// TODO: Use pxToRem ✅
-// TODO: Check grid (not changing to 300px 500px 300px on mediaQuery.lg)
-
 const DefiSectionContainer = styled.div`
   display: flex;
   justify-content: center;

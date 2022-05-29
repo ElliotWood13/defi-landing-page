@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
 
-// TODO: Convert to pxToRem, color, fontWeight & add mediaQuery(?)
+// TODO: Convert values to color & fontWeight
+// ❗️ ISSUE: (see line 19) - props (from featuresSection.jsx) don't seem to work when value is 'yellow'
 
 const CircleCard = styled.div`
     width: ${pxToRem(300)};
@@ -14,6 +15,8 @@ const CircleCard = styled.div`
     align-items: center;
     background-color: transparent;
     position: relative;
+
+    // background-color: ${(color) => color === 'yellow' ? 'yellow' : 'white'}; /* Remove */
 
     color: white; /* Remove */
     border: ${pxToRem(2)} solid rgb(252, 252, 233); /* Remove */
