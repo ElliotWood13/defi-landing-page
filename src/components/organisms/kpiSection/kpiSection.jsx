@@ -1,17 +1,21 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
+import { SectionContainer } from './kpiSection.styles'
 
 import './kpiSection.css'
+import StyledComponents from 'styled-components'
+import Data from './kpiData'
 
-// TODO: Make card component for each "kpiSection-card"
-// TODO: Store <h3>s & <li>s as data to map over for each card
+// TODO: Make Card component for each "kpiSection-card"
+// TODO: Map of data and return Card component
 
 export const KpiSection = React.forwardRef((props, ref) => {
 
   return (
     <Section ref={ref} background={gradient.greyBlack}>
-      <div className="section-container">
+      <SectionContainer>
+
         <div className="kpiSection-card">
           <h3 className="kpiSection__h3">Q1 2022</h3>
           <ul>
@@ -78,7 +82,8 @@ export const KpiSection = React.forwardRef((props, ref) => {
             <li>Announcement of new ecosystem additions.</li>
           </ul>
         </div>
-      </div>
+
+      </SectionContainer>
     </Section >
   )
 })
