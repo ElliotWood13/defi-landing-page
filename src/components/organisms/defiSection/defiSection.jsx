@@ -1,7 +1,9 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, Circle, CircleInnerShadow } from './defiSection.styles'
+import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, CircleCard, CircleInnerShadow } from './defiSection.styles'
+
+import Circle from '../featuresSection/Circle'
 
 import { GridImage } from '../brandSection/brandSection.styles'
 

@@ -84,6 +84,7 @@ const Circle = styled.div`
   background-color: transparent;
   position: relative;
   border: ${pxToRem(2)} solid rgb(252, 252, 233);
+  // border: ${pxToRem(2)} solid ${(color) => color};
   box-shadow: ${shadow.yellowOuter};
 `
 
