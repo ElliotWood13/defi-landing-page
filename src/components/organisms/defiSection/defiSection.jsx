@@ -7,7 +7,7 @@ import { GridImage } from '../brandSection/brandSection.styles'
 
 import './defiSection.css'
 
-// TODO: Fix imported GridImage
+// ❗️ ISSUE: Imported GridImage but does not display (lines 18-22)
 // ❗️ ISSUE: Circle component not rendering header and text props.
 
 export const DefiSection = React.forwardRef((props, ref) => {
