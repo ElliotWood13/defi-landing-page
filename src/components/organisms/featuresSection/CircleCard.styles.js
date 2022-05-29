@@ -16,13 +16,13 @@ const CircleCard = styled.div`
   background-color: transparent;
   position: relative;
 
-  /* background-color: ${(color) =>
-    color === 'yellow' ? 'yellow' : 'white'}; Remove */
-
   color: white; /* Remove */
   border: ${pxToRem(2)} solid rgb(252, 252, 233); /* Remove */
   box-shadow: 0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5),
     0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5); /* Remove */
+
+  border: 1px solid ${(color) => color === 'yellow' ? 'yellow' : 'white'};
+
 `
 
 const CircleCardInnerShadow = styled.div`
