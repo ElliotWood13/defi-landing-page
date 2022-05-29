@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { SectionContainer, KpiSectionCard, KpiSectionCardHeader, KpiSectionCardUl, KpiSectionCardLi } from './kpiSection.styles'
+import { SectionContainer, SectionGrid, KpiSectionCard, KpiSectionCardHeader, KpiSectionCardUl, KpiSectionCardLi } from './kpiSection.styles'
 
 import './kpiSection.css'
 import StyledComponents from 'styled-components'
@@ -14,19 +14,20 @@ export const KpiSection = React.forwardRef((props, ref) => {
   return (
     <Section ref={ref} background={gradient.greyBlack}>
       <SectionContainer>
+        <SectionGrid>
 
-        {Data.map(({ id, title, listItems }) => (
-          <KpiSectionCard key={id}>
-            <KpiSectionCardHeader>{title}</KpiSectionCardHeader>
-            <KpiSectionCardUl>
-              {listItems.map(item => (
-                <KpiSectionCardLi>{item}</KpiSectionCardLi>
-              ))}
-            </KpiSectionCardUl>
-          </KpiSectionCard>
-        ))}
+          {Data.map(({ id, title, listItems }) => (
+            <KpiSectionCard key={id}>
+              <KpiSectionCardHeader>{title}</KpiSectionCardHeader>
+              <KpiSectionCardUl>
+                {listItems.map(item => (
+                  <KpiSectionCardLi>{item}</KpiSectionCardLi>
+                ))}
+              </KpiSectionCardUl>
+            </KpiSectionCard>
+          ))}
 
-        {/* 
+          {/* 
         <KpiSectionCard>
           <KpiSectionCardHeader>Q1 2022</KpiSectionCardHeader>
           <KpiSectionCardUl>
@@ -95,6 +96,7 @@ export const KpiSection = React.forwardRef((props, ref) => {
         </div>
         */}
 
+        </SectionGrid>
       </SectionContainer>
     </Section >
   )

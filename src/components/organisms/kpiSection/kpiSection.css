@@ -1,18 +1,14 @@
-.section-container {
+/* .section-container {
     color: #ffffff;
-    /* ⬆ Link to design.js */
     display: grid;
     grid-template-columns: repeat(1, 100%);
-
 }
 
 .kpiSection-card {
     padding-left: 20px;
     padding-bottom: 20px;
     border-left: 1px solid rgba(255, 255, 0, .5);
-    /* Check colour */
     border-bottom: 1px solid rgba(255, 255, 0, .5);
-    /* Check colour */
     width: 100%;
     margin: 0 auto;
 }
@@ -25,7 +21,6 @@
     color: white;
     font-size: 30px;
     font-weight: 500;
-    /* font-family: font.brand; */
     margin-bottom: 10px;
 }
 
@@ -45,7 +40,7 @@
 
 
 
-/* MEDIA QUERIES */
+
 @media screen and (min-width: 375px) {
     .kpiSection-card {
         width: 20rem;
@@ -67,4 +62,4 @@
     .section-container {
         grid-template-columns: repeat(4, 15rem);
     }
-}
+} */
