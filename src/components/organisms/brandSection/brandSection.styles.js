@@ -9,7 +9,7 @@ const BrandWrapper = styled.div`
 
 const GridImage = styled.img`
   height: ${pxToRem(436)};
-  width: ${pxToRem(360)};
+  width: ${pxToRem(312)};
   position: absolute;
   top: 38%;
   right: 50%;
@@ -34,23 +34,23 @@ const GridImage = styled.img`
 `
 
 const LogoImage = styled.img`
-  height: ${pxToRem(332)};
+  height: ${pxToRem(284)};
   width: ${pxToRem(284)};
   margin: 0 auto;
   z-index: 1;
 
   ${mediaQuery.xxs} {
-    height: ${pxToRem(412)};
+    height: ${pxToRem(364)};
     width: ${pxToRem(364)};
   }
 
   ${mediaQuery.xs} {
-    height: ${pxToRem(460)};
+    height: ${pxToRem(412)};
     width: ${pxToRem(412)};
   }
 
   ${mediaQuery.sm} {
-    height: ${pxToRem(476)};
+    height: ${pxToRem(428)};
     width: ${pxToRem(428)};
   }
 `
@@ -62,6 +62,7 @@ const BrandText = styled.p`
   font-size: ${pxToRem(40)};
   font-weight: ${fontWeight.bold};
   text-shadow: 0.5px 0.5px ${color.grey[400]};
+  z-index: 1;
 
   ${mediaQuery.xs} {
     font-size: ${pxToRem(56)};
@@ -78,6 +79,7 @@ const BrandTagline = styled.p`
   font-weight: ${fontWeight.bold};
   text-transform: uppercase;
   font-size: ${pxToRem(18)};
+  z-index: 1;
 
   ${mediaQuery.xs} {
     font-size: ${pxToRem(28)};
