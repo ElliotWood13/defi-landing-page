@@ -1,21 +1,45 @@
 .container {
-    background-color: green;
+    /* background-color: green; */
     width: 100%;
+    max-width: 1000px;
     height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(1fr, 2fr, 1fr);
-}
-
-.grid-section {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+.background-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid yellow;
+    border-radius: 50%;
+    opacity: .3;
+}
+
+.bg-circle--md {
+    width: 320px;
+    height: 320px;
+}
+
+.bg-circle--md-outer {
+    width: 340px;
+    height: 340px;
+}
+
+.bg-circle--lg {
+    width: 600px;
+    height: 600px;
+}
+
+.bg-circle--lg-outer {
+    width: 630px;
+    height: 630px;
+}
+
 
 /* ------- */
 .circle {
@@ -23,13 +47,98 @@
     height: 300px;
     border-radius: 50%;
     border: 1px solid yellow;
+    box-shadow: 0 0 10px rgba(255, 255, 0, .5), 0 0 10px rgba(255, 255, 0, .5);
+
 }
 
 /* ------- */
 .icons {
-    grid-column: 1 / 2;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.timer {
-    grid-column: 3 / 4;
+.icons__button {
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+    transition: all .3s;
+}
+
+.icons__button:hover {
+    transform: scale(120%);
+    filter: brightness(120%);
+}
+
+.btn-round {
+    background-color: rgb(50, 50, 50);
+    border: none;
+    border-radius: 50%;
+}
+
+.btn-square {
+    background-color: rgb(50, 50, 50);
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+}
+
+.countdown-timer {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-timer__heading {
+    background: linear-gradient(to left, lightgray, gray);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transform: rotate(90deg) translateY(-50%);
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.countdown-timer__clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-120%);
+}
+
+.clock__row {
+    display: grid;
+    grid-template-columns: 40px 40px;
+    grid-gap: 10px;
+    grid-template-rows: 50px;
+    border: 1px solid gray;
+    margin: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);
+
+}
+
+.clock__row--square {
+    color: gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+    background: linear-gradient(to left, lightgray, gray);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
