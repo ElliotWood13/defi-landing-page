@@ -28,16 +28,16 @@ function App() {
   })
   return (
     <>
-      {/* <Header>
+      <Header>
         <Navigation ref={refs} />
-      </Header> */}
+      </Header>
       <RegularLayout>
         <BrandSection ref={brandSectionRef} />
         <DefiSection ref={uspSectionRef} />
         <FeaturesSection ref={featuresSectionRef} />
         <TeamSection ref={teamSectionRef} />
         <KpiSection ref={targetsSectionRef} />
-        <CountdownSection ref={countdownSectionRef} />
+        {/* <CountdownSection ref={countdownSectionRef} /> */}
       </RegularLayout>
     </>
   )

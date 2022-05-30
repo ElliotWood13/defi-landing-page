@@ -2,81 +2,90 @@ import styled from 'styled-components'
 import { pxToRem, mediaQuery, color, fontWeight } from '../../../design'
 import { Svg } from '../../../helpers/svgMapper'
 
+const NavigationWrapper = styled.div`
+  transition: all 0.3s ease-in-out;
+
+  ${(props) =>
+    props.isActive &&
+    `
+      background: #000;
+      box-shadow: 0px 0px 15px 13px #000;
+      padding: ${pxToRem(20)};  
+  `}
+`
+
 const Burger = styled.button`
   border: none;
-  background: none;
+  background: #000;
+  box-shadow: 0px 0px 15px 13px #000;
+  padding: ${(props) => (props.isActive ? `${pxToRem(10)}` : '0')};
+`
 
-  ${mediaQuery.md} {
-    display: none;
+const BurgerMenu = styled.div`
+  ${(props) =>
+    props.isActive &&
+    `
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+  `}
+
+  :hover {
+    cursor: pointer;
   }
 `
 
-const BurgerSvg = styled(Svg)`
-  height: ${pxToRem(30)};
-  width: ${pxToRem(30)};
+const BurgerMenuLine = styled.span`
+  width: 30px;
+  height: 3px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+
+  ${(props) =>
+    props.isActive &&
+    `
+    :nth-child(2) {
+      width: 0px;
+    }
+
+    :nth-child(1) {
+      transition-delay: 0.3s;
+      transform: translateY(10px);
+    }
+
+    :nth-child(3) {
+      transition-delay: 0.3s;
+      transform: translateY(-13px) rotate(90deg);
+    }
+  `}
 `
 
 const CloseButton = styled.button`
   border: none;
   background: none;
-
-  ${mediaQuery.md} {
-    display: none;
-  }
 `
 
 const CloseSvg = styled(Svg)`
-  height: ${pxToRem(30)};
-  width: ${pxToRem(30)};
+  height: ${pxToRem(40)};
+  width: ${pxToRem(40)};
 `
 
 const Nav = styled.nav`
-  position: fixed;
-  z-index: 10;
-  width: ${(props) => (props.mobileMenuOpen ? '100%' : '0')};
-  background-color: ${color.black[100]};
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  transition: width 0.5s ease;
-
-  ${mediaQuery.sm} {
-    width: ${(props) => (props.mobileMenuOpen ? `60%` : `0`)};
-    ${(props) =>
-      props.mobileMenuOpen &&
-      `box-shadow: 0 0 0 ${pxToRem(1000)} rgba(0, 0, 0, 0.5)`};
-  }
-
-  ${mediaQuery.md} {
-    position: static;
-    width: initial;
-    padding: 0;
-    border-right: 0;
-    background-color: ${color.white[100]};
-  }
+  visibility: ${(props) => (props.mobileMenuOpen ? 'visible' : 'hidden')};
+  opacity: ${(props) => (props.mobileMenuOpen ? '1' : '0')};
+  transition: all 0.2s ease;
 `
 
 const NavLogoWrapper = styled.div`
   display: flex;
   justify-content: end;
   padding: ${pxToRem(24)} ${pxToRem(20)};
-
-  ${mediaQuery.md} {
-    display: none;
-  }
 `
 
 const LinkList = styled.ul`
   background-color: ${color.black[100]};
-  width: 100%;
-  padding: 0 ${pxToRem(20)} ${pxToRem(24)} ${pxToRem(20)};
-
-  ${mediaQuery.md} {
-    padding: ${pxToRem(8)} ${pxToRem(16)};
-    display: flex;
-    justify-content: center;
-  }
 `
 
 const LinkItem = styled.li`
@@ -84,26 +93,10 @@ const LinkItem = styled.li`
   list-style-type: none;
   color: ${color.body};
   font-weight: ${fontWeight.bold};
+  text-shadow: 0px 1px 8px ${color.grey[400]};
 
-  :after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px ${color.brand};
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-
-  :hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  ${mediaQuery.md} {
-    padding: 0 ${pxToRem(20)};
-
-    :last-child {
-      margin-right: 0;
-    }
+  :hover {
+    text-shadow: 0px 1px 8px ${color.brand};
   }
 `
 
@@ -115,17 +108,14 @@ const StyledLink = styled.a`
   padding: ${pxToRem(16)} 0;
   font-size: ${pxToRem(18)};
   color: ${color.grey[100]};
-
-  ${mediaQuery.md} {
-    font-size: ${pxToRem(16)};
-    padding: 0 ${pxToRem(20)};
-  }
 `
 
 export {
+  NavigationWrapper,
   Burger,
+  BurgerMenu,
+  BurgerMenuLine,
   CloseButton,
-  BurgerSvg,
   CloseSvg,
   Nav,
   NavLogoWrapper,

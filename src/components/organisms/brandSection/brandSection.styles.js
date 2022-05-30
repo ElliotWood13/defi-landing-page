@@ -18,7 +18,7 @@ const GridImage = styled.img`
   ${mediaQuery.xxs} {
     top: 40%;
     height: ${pxToRem(516)};
-    width: ${pxToRem(472)};
+    width: ${pxToRem(392)};
   }
 
   ${mediaQuery.xs} {
@@ -61,7 +61,7 @@ const BrandText = styled.p`
   text-align: center;
   font-size: ${pxToRem(40)};
   font-weight: ${fontWeight.bold};
-  text-shadow: 0.5px 0.5px ${color.grey[400]};
+  text-shadow: -2px 1px 2px ${color.grey[400]};
   z-index: 1;
 
   ${mediaQuery.xs} {
@@ -80,6 +80,7 @@ const BrandTagline = styled.p`
   text-transform: uppercase;
   font-size: ${pxToRem(18)};
   z-index: 1;
+  text-shadow: 0px 1px 15px ${color.grey[400]};
 
   ${mediaQuery.xs} {
     font-size: ${pxToRem(28)};

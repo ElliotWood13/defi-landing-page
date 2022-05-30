@@ -33,8 +33,8 @@ const TeamCardImageWrapper = styled.div`
 `
 
 const TeamCardImage = styled.img`
-  height: ${pxToRem(180)};
-  width: ${pxToRem(180)};
+  height: ${pxToRem(148)};
+  width: ${pxToRem(148)};
   border-radius: 50%;
   margin-bottom: ${pxToRem(8)};
   border: 3px solid ${color.brand};
@@ -44,8 +44,8 @@ const TeamCardInnerShadow = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: ${pxToRem(180)};
-  width: ${pxToRem(180)};
+  height: ${pxToRem(148)};
+  width: ${pxToRem(148)};
   border-radius: 50%;
   background-color: transparent;
   box-shadow: ${shadow.yellowInner};

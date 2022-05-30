@@ -17,6 +17,10 @@ const SectionPosition = styled.div`
   width: 100%;
   max-width: ${layout.regular};
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `
 
 export { SectionWrapper, SectionPosition }

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import FocusTrap from 'focus-trap-react'
 import {
+  NavigationWrapper,
   Burger,
-  BurgerSvg,
-  CloseButton,
-  CloseSvg,
+  BurgerMenu,
+  BurgerMenuLine,
   Nav,
-  NavLogoWrapper,
   LinkList,
   LinkItem,
   StyledLink,
@@ -16,6 +15,7 @@ import { useWindowResize } from '../../../hooks'
 import { color } from '../../../design'
 
 export const Navigation = React.forwardRef((props, ref) => {
+  console.log('rerender');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [, setScrollLockActive] = useScrollLock()
   const [width] = useWindowResize()
@@ -29,6 +29,9 @@ export const Navigation = React.forwardRef((props, ref) => {
   } = ref.current
 
   const handleScroll = (ref) => {
+    setMobileMenuOpen(false)
+
+    console.log('ref', ref.current.offsetTop);
     window.scrollTo({
       top: ref.current.offsetTop,
       left: 0,
@@ -68,37 +71,54 @@ export const Navigation = React.forwardRef((props, ref) => {
       ref: countdownSectionRef,
     },
   ]
-  console.log(links);
 
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      setScrollLockActive(true)
-    } else {
-      setScrollLockActive(false)
-    }
-  }, [mobileMenuOpen, setScrollLockActive])
+  // useEffect(() => {
+  //   if (mobileMenuOpen) {
+  //     setScrollLockActive(true)
+  //   } else {
+  //     setScrollLockActive(false)
+  //   }
+  // }, [mobileMenuOpen, setScrollLockActive])
 
   useEffect(() => {
     setMobileMenuOpen(false)
   }, [width])
 
   return (
-    <>
+    <NavigationWrapper isActive={mobileMenuOpen}>
       <Burger
         aria-label="menu"
         aria-expanded={mobileMenuOpen}
         aria-controls="menu"
-        onClick={() => setMobileMenuOpen(true)}
+        onClick={() => setMobileMenuOpen(prevState => !prevState)}
       >
-        <BurgerSvg type="burger" fill={color.body} />
+        {/* <BurgerSvg type="burger" fill={color.body} /> */}
+        <BurgerMenu isActive={mobileMenuOpen}>
+          <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
+          <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
+          <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
+        </BurgerMenu>
       </Burger>
-      <FocusTrap active={mobileMenuOpen}>
+      <Nav mobileMenuOpen={mobileMenuOpen}>
+        <LinkList id="menu">
+        {links.map((link) => (
+          <LinkItem
+            key={link.id}
+          >
+            <StyledLink
+              href='#'
+              onClick={() => { 
+                handleScroll(link.ref)
+              }}
+            >
+              {link.name}
+            </StyledLink>
+          </LinkItem>
+        ))}
+        </LinkList>
+      </Nav>
+      {/* <FocusTrap active={mobileMenuOpen}>
         <Nav role="navigation" mobileMenuOpen={mobileMenuOpen}>
-          <NavLogoWrapper>
-            <CloseButton onClick={() => setMobileMenuOpen(false)}>
-              <CloseSvg type="close" fill={color.body} />
-            </CloseButton>
-          </NavLogoWrapper>
           <LinkList id="menu">
             {links.map((link) => (
               <LinkItem
@@ -107,8 +127,8 @@ export const Navigation = React.forwardRef((props, ref) => {
                 <StyledLink
                   href='#'
                   onClick={() => { 
-                    handleScroll(link.ref)
                     setMobileMenuOpen(false)
+                    handleScroll(link.ref)
                   }}
                 >
                   {link.name}
@@ -117,7 +137,7 @@ export const Navigation = React.forwardRef((props, ref) => {
             ))}
           </LinkList>
         </Nav>
-      </FocusTrap>
-    </>
+      </FocusTrap> */}
+    </NavigationWrapper>
   )
 })

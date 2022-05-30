@@ -1,21 +1,16 @@
 import styled from 'styled-components'
-import { layout, mediaQuery, pxToRem, color } from '../../../design'
+import { pxToRem, mediaQuery } from '../../../design'
 
 const HeaderWrapper = styled.header`
-  display: flex;
-  flex-wrap: wrap;
-  background-color: ${color.black[100]};
-  padding: ${pxToRem(20)} ${pxToRem(20)};
+  position: fixed;
+  z-index: 20;
+  padding: ${pxToRem(5)};
+  top: ${pxToRem(20)};
+  left: ${pxToRem(20)};
 
-  ${mediaQuery.sm} {
-    padding: ${pxToRem(8)} ${pxToRem(20)};
+  ${mediaQuery.md} {
+    padding: ${pxToRem(20)};
   }
 `
 
-const HeaderPosition = styled.div`
-  width: 100%;
-  max-width: ${layout.regular};
-  margin: 0 auto;
-`
-
-export { HeaderWrapper, HeaderPosition }
+export { HeaderWrapper }
