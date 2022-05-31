@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useLayoutEffect } from 'react'
 import { RegularLayout } from './components/layouts/regularLayout'
 import { Header } from './components/organisms/header'
 import { BrandSection } from './components/organisms/brandSection/brandSection'
@@ -26,10 +26,17 @@ function App() {
     targetsSectionRef,
     countdownSectionRef,
   })
+  const handleScroll = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <>
       <Header>
-        <Navigation ref={refs} />
+        <Navigation ref={refs} handleScroll={handleScroll} />
       </Header>
       <RegularLayout>
         <BrandSection ref={brandSectionRef} />

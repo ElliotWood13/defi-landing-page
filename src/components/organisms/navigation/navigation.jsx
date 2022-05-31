@@ -14,7 +14,7 @@ import { useScrollLock } from '../../../hooks'
 import { useWindowResize } from '../../../hooks'
 import { color } from '../../../design'
 
-export const Navigation = React.forwardRef((props, ref) => {
+export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
   // TODO: Work out why it only navigates every other time
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [, setScrollLockActive] = useScrollLock()
@@ -28,16 +28,6 @@ export const Navigation = React.forwardRef((props, ref) => {
     countdownSectionRef,
   } = ref.current
 
-  const handleScroll = (ref) => {
-    setMobileMenuOpen(false)
-
-    console.log('ref', ref.current.offsetTop);
-    window.scrollTo({
-      top: ref.current.offsetTop,
-      left: 0,
-      behavior: 'smooth',
-    })
-  }
   
   const links = [
     {
@@ -106,8 +96,9 @@ export const Navigation = React.forwardRef((props, ref) => {
             key={link.id}
           >
             <StyledLink
-              href='#'
+              href={`#${link.name}`}
               onClick={() => { 
+                setMobileMenuOpen(false)
                 handleScroll(link.ref)
               }}
             >
