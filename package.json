@@ -1,5 +1,4 @@
 {
-  "homepage": "https://elliotwood13.github.io/scroll-snap-site",
   "name": "app",
   "version": "0.1.0",
   "private": true,
@@ -15,9 +14,6 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",
