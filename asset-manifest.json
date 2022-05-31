@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/scroll-snap-site/static/css/main.a2a6d33d.css",
+    "main.js": "/scroll-snap-site/static/js/main.b5459ab3.js",
+    "static/js/787.c1112931.chunk.js": "/scroll-snap-site/static/js/787.c1112931.chunk.js",
+    "static/media/globe-and-logo.png": "/scroll-snap-site/static/media/globe-and-logo.2b74696278cae77cb5d3.png",
+    "static/media/middle-section.png": "/scroll-snap-site/static/media/middle-section.b11d674cc342ff14912e.png",
+    "static/media/grid.png": "/scroll-snap-site/static/media/grid.afab6323d099a047467b.png",
+    "index.html": "/scroll-snap-site/index.html",
+    "main.a2a6d33d.css.map": "/scroll-snap-site/static/css/main.a2a6d33d.css.map",
+    "main.b5459ab3.js.map": "/scroll-snap-site/static/js/main.b5459ab3.js.map",
+    "787.c1112931.chunk.js.map": "/scroll-snap-site/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2a6d33d.css",
+    "static/js/main.b5459ab3.js"
+  ]
+}
