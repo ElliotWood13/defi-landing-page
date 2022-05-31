@@ -8,36 +8,43 @@ export const TeamSection = React.forwardRef((props, ref) => {
 
   const team = [
     {
+      id: 1,
       name: 'Shubham',
       position: 'Social Media Director',
       imgSrc: require('../../../images/team/s.png')
     },
     {
+      id: 2,
       name: 'AJ',
       position: 'Founder and CEO',
       imgSrc: require('../../../images/team/a.png')
     },
     {
+      id: 3,
       name: 'Cyborg',
       position: 'VP Development',
       imgSrc: require('../../../images/team/c.png')
     },
     {
+      id: 4,
       name: 'Playing Mia',
       position: 'Community Director',
       imgSrc: require('../../../images/team/m.png')
     },
     {
+      id: 5,
       name: 'Tommy',
       position: 'CFO',
       imgSrc: require('../../../images/team/t.png')
     },
     {
+      id: 6,
       name: 'Kelvin',
       position: 'CFO',
       imgSrc: require('../../../images/team/k.png')
     },
     {
+      id: 7,
       name: 'Elliot',
       position: 'Front End Developer',
       imgSrc: require('../../../images/team/e.png')
@@ -48,7 +55,7 @@ export const TeamSection = React.forwardRef((props, ref) => {
       <Section ref={ref} background={gradient.greyBlack}>
         <TeamSectionHeaderH2>Team</TeamSectionHeaderH2>
         <TeamCardsContainer>
-          { team.map(teamMember => <TeamCard name={teamMember.name} position={teamMember.position} imageSrc={teamMember.imgSrc} />) }
+          { team.map(teamMember => <TeamCard id={teamMember.id} name={teamMember.name} position={teamMember.position} imageSrc={teamMember.imgSrc} />) }
         </TeamCardsContainer>
       </Section>
     )
