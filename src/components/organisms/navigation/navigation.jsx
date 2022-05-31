@@ -15,7 +15,7 @@ import { useWindowResize } from '../../../hooks'
 import { color } from '../../../design'
 
 export const Navigation = React.forwardRef((props, ref) => {
-  console.log('rerender');
+  // TODO: Work out why it only navigates every other time
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [, setScrollLockActive] = useScrollLock()
   const [width] = useWindowResize()
