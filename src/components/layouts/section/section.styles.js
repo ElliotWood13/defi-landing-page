@@ -14,6 +14,20 @@ const SectionWrapper = styled.section`
   }
 `
 
+const LinesImage = styled.img`
+  display: none;
+
+  ${mediaQuery.sm} {
+    display: block;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+`
+
 const SectionPosition = styled.div`
   width: 100%;
   max-width: ${layout.regular};
@@ -24,4 +38,4 @@ const SectionPosition = styled.div`
   flex-direction: column;
 `
 
-export { SectionWrapper, SectionPosition }
+export { SectionWrapper, LinesImage, SectionPosition }
