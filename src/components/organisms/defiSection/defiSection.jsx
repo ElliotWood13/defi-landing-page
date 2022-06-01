@@ -37,7 +37,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
           <Circle color="yellow" header="Donation As A Service" text="Launchpad, Crowdfunding suite + Green finance intended to provide
               developers with the means to launch and give back." bottomLine={true} />
           <Circle color="yellow" header="Off Chain Investments" text="Protocol synergises real world assets with Meta, Crypto and DeFi
-              investments as part of a diversified investment strategy." bottomLine={false} />
+              investments as part of a diversified investment strategy." bottomLine={true} />
           <Circle color="yellow" header="Tax Haven" text="First tax haven in cryptocurrency." bottomLine={false} />
 
         </DefiSectionGrid>
