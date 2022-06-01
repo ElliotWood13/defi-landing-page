@@ -30,7 +30,7 @@ const DefiSectionGrid = styled.div`
 `
 
 const HeaderContainer = styled.div`
-  background-color: transparent; 
+  background-color: transparent;
   position: relative;
 
   display: flex;
@@ -49,6 +49,7 @@ const HeaderContainer = styled.div`
 `
 
 const Blockquote = styled.blockquote`
+  filter: drop-shadow(0px 0px 4px #9a9a9a);
   background: linear-gradient(to bottom, lightgray, gray);
   background-clip: text;
   -webkit-background-clip: text;
@@ -71,8 +72,8 @@ const Blockquote = styled.blockquote`
   //   z-index: 5;
   //   // background-color: red;
   //   border: 1px solid red;
-
-  }
+  /* 
+  } */
 
   ${mediaQuery.md} {
     max-width: ${pxToRem(300)};
