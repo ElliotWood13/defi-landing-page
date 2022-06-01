@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, CircleCard, CircleInnerShadow } from './defiSection.styles'
+import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, CircleCard, CircleInnerShadow, HorizontalLine } from './defiSection.styles'
 
 import Circle from '../featuresSection/Circle'
 import { GridImage } from '../brandSection/brandSection.styles'
@@ -29,6 +29,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
             <Blockquote>
               "To change something, you must build a new model that makes the
               existing model obsolete" <BlockquoteName>- Buckminster Fuller</BlockquoteName>
+              <HorizontalLine />
             </Blockquote>
           </HeaderContainer>
 

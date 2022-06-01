@@ -11,7 +11,6 @@ const FeaturesSectionGrid = styled.div`
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(5, auto);
   grid-gap: ${pxToRem(50)};
-  /* grid-template-areas: "quote", "circle", "circle", "circle", "circle"; */
 
   ${mediaQuery.sm} {
     grid-template-columns: repeat(2, ${pxToRem(300)});
@@ -30,9 +29,11 @@ const FeaturesSectionGrid = styled.div`
 `
 
 const HeaderContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 
   ${mediaQuery.sm} {
     grid-column: 1 / 3;
@@ -48,6 +49,8 @@ const HeaderContainer = styled.div`
 const FeaturesSectionHeader = styled.div`
     box-shadow: 3px 5px 20px 5px rgba(255, 255, 255, .5) inset;
     display: inline-block;
+    background-color: black;
+    z-index: 10;
 
     ${mediaQuery.lg} {
         white-space: nowrap;
@@ -72,14 +75,28 @@ const FeaturesSectionHeaderH2 = styled.h2`
     border: 2px solid rgb(252, 252, 233);
     box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);
     border-radius: 3px;
+
+    z-index: 50;
+`
+
+const HorizontalLine = styled.div`
+    background-color: white;
+    position: absolute; 
+    top: 47%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: calc(100% + 400px);
+    height: 2px;
+    z-index: -30;
 `
 
 
 
 export {
-    FeaturesSectionContainer,
-    FeaturesSectionGrid,
-    HeaderContainer,
-    FeaturesSectionHeader,
-    FeaturesSectionHeaderH2,
+  FeaturesSectionContainer,
+  FeaturesSectionGrid,
+  HeaderContainer,
+  FeaturesSectionHeader,
+  FeaturesSectionHeaderH2,
+  HorizontalLine,
 }

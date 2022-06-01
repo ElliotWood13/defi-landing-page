@@ -68,6 +68,11 @@ const CircleLine__Bottom = styled.div`
   height: 52px;
   background-color: white;
   box-shadow: ${({ color }) => color === 'yellow' ? `${shadow.yellowInner}` : `${shadow.whiteInner}`};
+
+  // ADD ID TO CIRCLE (PROPS) - REMOVE IF ID === ___
+  ${mediaQuery.sm} {
+    // display: none;
+  }
 `
 
 export { CircleCard, CircleCardInnerShadow, CircleHeaderH3, CircleText, CircleLine__Bottom }

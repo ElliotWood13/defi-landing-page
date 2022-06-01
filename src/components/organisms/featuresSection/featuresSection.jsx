@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { FeaturesSectionContainer, FeaturesSectionGrid, HeaderContainer, FeaturesSectionHeader, FeaturesSectionHeaderH2 } from './featuresSection.styles'
+import { FeaturesSectionContainer, FeaturesSectionGrid, HeaderContainer, FeaturesSectionHeader, FeaturesSectionHeaderH2, HorizontalLine } from './featuresSection.styles'
 import Circle from './Circle'
 
 import './featuresSection.css'
@@ -13,11 +13,11 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
     <Section ref={ref} background={gradient.greyBlack}>
       <FeaturesSectionContainer>
         <FeaturesSectionGrid>
-
           <HeaderContainer>
             <FeaturesSectionHeader>
               <FeaturesSectionHeaderH2>Built on the mesh network</FeaturesSectionHeaderH2>
             </FeaturesSectionHeader>
+            <HorizontalLine />
           </HeaderContainer>
 
           <Circle color="white" header="Enhanced Security Network" bottomLine={true} />
