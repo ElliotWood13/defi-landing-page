@@ -71,6 +71,7 @@ const KpiSectionCardHeader = styled.h3`
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 10px;
+  filter: drop-shadow(5px 3px 4px #9a9a9a);
 `
 
 const KpiSectionCardUl = styled.ul`
