@@ -29,7 +29,7 @@ export const DefiSection = React.forwardRef((props, ref) => {
             <Blockquote>
               "To change something, you must build a new model that makes the
               existing model obsolete" <BlockquoteName>- Buckminster Fuller</BlockquoteName>
-              <HorizontalLine />
+              {/* <HorizontalLine /> */}
             </Blockquote>
           </HeaderContainer>
 
