@@ -20,32 +20,10 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
             </FeaturesSectionHeader>
           </HeaderContainer>
 
-          <Circle color="white" header="Enhanced Security Network" />
-          <Circle color="white" header="Insulation from market volatility" />
-          <Circle color="white" header="Consistent network stability" />
-          <Circle color="white" header="Interoperability between tradfi and defi" />
-
-          {/*  
-          <div className="circle circle-white">
-            <div className="circle__inner-shadow inner-shadow--white"></div>
-            <h3 className="circle__header">Enhanced Security Network</h3>
-          </div>
-
-          <div className="circle circle-white">
-            <div className="circle__inner-shadow inner-shadow--white"></div>
-            <h3 className="circle__header">Insulation from market volatility</h3>
-          </div>
-
-          <div className="circle circle-white">
-            <div className="circle__inner-shadow inner-shadow--white"></div>
-            <h3 className="circle__header">Consistent network stability</h3>
-          </div>
-
-          <div className="circle circle-white">
-            <div className="circle__inner-shadow inner-shadow--white"></div>
-            <h3 className="circle__header">Interoperability between tradfi and defi</h3>
-          </div>
-          */}
+          <Circle color="white" header="Enhanced Security Network" bottomLine={true} />
+          <Circle color="white" header="Insulation from market volatility" bottomLine={true} />
+          <Circle color="white" header="Consistent network stability" bottomLine={false} />
+          <Circle color="white" header="Interoperability between tradfi and defi" bottomLine={false} />
 
         </FeaturesSectionGrid>
       </FeaturesSectionContainer>

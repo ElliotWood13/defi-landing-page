@@ -4,8 +4,6 @@ import { gradient } from '../../../design'
 import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, CircleCard, CircleInnerShadow } from './defiSection.styles'
 
 import Circle from '../featuresSection/Circle'
-// import glowContainer from '../../molecules/glowContainer'
-
 import { GridImage } from '../brandSection/brandSection.styles'
 import LinesImage from '../../../images/middle-lines.png'
 
@@ -34,51 +32,13 @@ export const DefiSection = React.forwardRef((props, ref) => {
             </Blockquote>
           </HeaderContainer>
 
-
           <Circle color="yellow" header="Nft Staking Rewards" text="Option to combine up to four NFT's for up to 32% additional APY
-              boost on token staking rewards." />
+              boost on token staking rewards." bottomLine={true} />
           <Circle color="yellow" header="Donation As A Service" text="Launchpad, Crowdfunding suite + Green finance intended to provide
-              developers with the means to launch and give back." />
+              developers with the means to launch and give back." bottomLine={true} />
           <Circle color="yellow" header="Off Chain Investments" text="Protocol synergises real world assets with Meta, Crypto and DeFi
-              investments as part of a diversified investment strategy." />
-          <Circle color="yellow" header="Tax Haven" text="First tax haven in cryptocurrency." />
-
-          {/*
-          <Circle>
-            <CircleInnerShadow />
-            <h3 className="circle__header">Nft Staking Rewards</h3>
-            <p className="circle__text">
-              Option to combine up to four NFT's for up to 32% additional APY
-              boost on token staking rewards.
-            </p>
-          </Circle>
-
-          <Circle>
-            <CircleInnerShadow />
-            <h3 className="circle__header">Donation As A Service</h3>
-            <p className="circle__text">
-              Launchpad, Crowdfunding suite + Green finance intended to provide
-              developers with the means to launch and give back.
-            </p>
-          </Circle>
-
-          <Circle>
-            <CircleInnerShadow />
-            <h3 className="circle__header">Off Chain Investments</h3>
-            <p className="circle__text">
-              Protocol synergises real world assets with Meta, Crypto and DeFi
-              investments as part of a diversified investment strategy.
-            </p>
-          </Circle>
-
-          <Circle>
-            <CircleInnerShadow />
-            <h3 className="circle__header">Tax Haven</h3>
-            <p className="circle__text">
-              First tax haven in cryptocurrency.
-            </p>
-          </Circle>
-          */}
+              investments as part of a diversified investment strategy." bottomLine={false} />
+          <Circle color="yellow" header="Tax Haven" text="First tax haven in cryptocurrency." bottomLine={false} />
 
         </DefiSectionGrid>
       </DefiSectionContainer>
