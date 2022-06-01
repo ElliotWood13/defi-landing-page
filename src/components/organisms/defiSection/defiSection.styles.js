@@ -31,6 +31,7 @@ const DefiSectionGrid = styled.div`
 
 const HeaderContainer = styled.div`
   background-color: transparent; 
+  position: relative;
 
   display: flex;
   justify-content: center;
@@ -52,12 +53,26 @@ const Blockquote = styled.blockquote`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: 20;
 
   font-size: ${pxToRem(40)};
   text-align: center;
   text-transform: uppercase;
   line-height: 1.1;
   margin: 0 ${pxToRem(20)};
+
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 5;
+  //   // background-color: red;
+  //   border: 1px solid red;
+
+  }
 
   ${mediaQuery.md} {
     max-width: ${pxToRem(300)};
@@ -70,6 +85,7 @@ const BlockquoteName = styled.span`
   font-size: ${pxToRem(18)};
   font-weight: 600;
   margin-top: ${pxToRem(16)};
+  z-index: 20;
 `
 
 const Circle = styled.div`
@@ -99,6 +115,16 @@ const CircleInnerShadow = styled.div`
   box-shadow: ${shadow.yellowInner};
 `
 
+const HorizontalLine = styled.div`
+  background-color: yellow;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: calc(100% + 400px);
+  height: 2px;
+`
+
 export {
   DefiSectionContainer,
   DefiSectionGrid,
@@ -107,4 +133,5 @@ export {
   BlockquoteName,
   Circle,
   CircleInnerShadow,
+  HorizontalLine,
 }

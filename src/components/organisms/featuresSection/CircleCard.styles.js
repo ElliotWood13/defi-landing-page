@@ -59,4 +59,20 @@ margin: ${pxToRem(20)};
 z-index: 10;
 `
 
-export { CircleCard, CircleCardInnerShadow, CircleHeaderH3, CircleText }
+const CircleLine__Bottom = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 52px;
+  background-color: white;
+  box-shadow: ${({ color }) => color === 'yellow' ? `${shadow.yellowInner}` : `${shadow.whiteInner}`};
+
+  // ADD ID TO CIRCLE (PROPS) - REMOVE IF ID === ___
+  ${mediaQuery.sm} {
+    // display: none;
+  }
+`
+
+export { CircleCard, CircleCardInnerShadow, CircleHeaderH3, CircleText, CircleLine__Bottom }
