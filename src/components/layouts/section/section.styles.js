@@ -2,14 +2,15 @@ import styled from 'styled-components'
 import { layout, mediaQuery, pxToRem, gradient } from '../../../design'
 
 const SectionWrapper = styled.section`
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   background: ${(props) => props.background ?? gradient.greyBlack};
-  padding: ${pxToRem(100)} ${pxToRem(20)};
-  min-height: 100vh;
+  padding: ${pxToRem(50)} ${pxToRem(20)};
+  /* min-height: 100vh; */
 
   ${mediaQuery.sm} {
-    padding: ${pxToRem(120)} ${pxToRem(20)};
+    padding: ${pxToRem(60)} ${pxToRem(20)};
   }
 `
 
