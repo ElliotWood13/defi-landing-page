@@ -44,7 +44,7 @@ function App() {
         <FeaturesSection ref={featuresSectionRef} />
         <TeamSection ref={teamSectionRef} />
         <KpiSection ref={targetsSectionRef} />
-        {/* <CountdownSection ref={countdownSectionRef} /> */}
+        <CountdownSection ref={countdownSectionRef} />
       </RegularLayout>
     </>
   )

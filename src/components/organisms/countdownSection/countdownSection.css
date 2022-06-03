@@ -1,11 +1,11 @@
-.container {
+.countdown-container {
     /* background-color: green; */
     width: 100%;
     max-width: 1000px;
     height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
 }
@@ -15,9 +15,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid yellow;
+    border: 1px solid rgba(255, 255, 0, .3);
     border-radius: 50%;
-    opacity: .3;
 }
 
 .bg-circle--md {
@@ -42,13 +41,57 @@
 
 
 /* ------- */
-.circle {
+.circle-container {
+    background-color: red;
+}
+
+/* .circle {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     border: 1px solid yellow;
     box-shadow: 0 0 10px rgba(255, 255, 0, .5), 0 0 10px rgba(255, 255, 0, .5);
+} */
 
+.countdown-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid yellow;
+    box-shadow: 0 0 10px rgba(255, 255, 0, .5), 0 0 10px rgba(255, 255, 0, .5);
+}
+
+
+/* ------- */
+.header {
+    /* background-color: red; */
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.header__top,
+.header__bottom {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-shadow: 0 0 5px rgba(255, 255, 0, .3), 0 0 10px rgba(255, 255, 0, .3), 0 0 15px rgba(255, 255, 0, .3), 0 0 20px rgba(255, 255, 0, .3), 0 0 30px rgba(255, 255, 0, .3), 0 0 40px rgba(255, 255, 0, .3), 0 0 55px rgba(255, 255, 0, .3), 0 0 75px rgba(255, 255, 0, .3);
+}
+
+.header__top {
+    margin-top: 30px;
+    font-size: 60px;
+    margin-bottom: -20px;
+}
+
+.header__bottom {
+    font-size: 36px;
 }
 
 /* ------- */
@@ -141,4 +184,43 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .countdown-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .countdown-circle {
+        display: none;
+    }
+
+    .background-circle,
+    .bg-circle--md,
+    .bg-circle--md-outer,
+    .bg-circle--lg,
+    .bg-circle--lg-outer,
+    .countdown-timer {
+        display: none;
+    }
+
+    .icons {
+        width: 100%;
+        flex-direction: row;
+        order: 2;
+    }
+
+    .header__top {
+        margin-top: 30px;
+        font-size: 70px;
+        margin-bottom: -20px;
+    }
+
+    .header__bottom {
+        font-size: 42px;
+    }
 }
