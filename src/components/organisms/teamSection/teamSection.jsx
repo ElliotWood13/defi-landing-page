@@ -5,7 +5,6 @@ import { TeamSectionHeaderH2, TeamCardsContainer } from './teamSection.styles'
 import { TeamCard } from '../../molecules/teamCard'
 
 export const TeamSection = React.forwardRef((props, ref) => {
-
   const team = [
     {
       id: 1,
@@ -52,7 +51,7 @@ export const TeamSection = React.forwardRef((props, ref) => {
   ]
 
     return (
-      <Section ref={ref} background={gradient.greyBlack}>
+      <Section ref={ref} background={gradient.greyBlack} section='section-four'>
         <TeamSectionHeaderH2>Team</TeamSectionHeaderH2>
         <TeamCardsContainer>
           { team.map(teamMember => <TeamCard id={teamMember.id} name={teamMember.name} position={teamMember.position} imageSrc={teamMember.imgSrc} />) }

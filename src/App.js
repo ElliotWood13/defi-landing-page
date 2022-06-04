@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from 'react'
+import React, { useRef } from 'react'
 import { RegularLayout } from './components/layouts/regularLayout'
 import { Header } from './components/organisms/header'
 import { BrandSection } from './components/organisms/brandSection/brandSection'
@@ -18,6 +18,7 @@ function App() {
   const teamSectionRef = useRef(null)
   const targetsSectionRef = useRef(null)
   const countdownSectionRef = useRef(null)
+
   const refs = useRef({
     brandSectionRef,
     uspSectionRef,
@@ -26,6 +27,7 @@ function App() {
     targetsSectionRef,
     countdownSectionRef,
   })
+
   const handleScroll = (ref) => {
     window.scrollTo({
       top: ref.current.offsetTop,

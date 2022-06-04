@@ -3,11 +3,9 @@ import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 import { SectionWrapper, CountdownContainer, BackgroundCircleInnerMd, BackgroundCircleOuterMd, BackgroundCircleInnerLg, BackgroundCircleOuterLg, CountdownCircle, HeaderWrapper, HeaderTop, HeaderBottom, IconsWrapper, StyledSvg, DiscordSvgWrapper, TwitterSvgWrapper,MediumSvgWrapper } from './countdownSection.styles'
 
-// ❗️ TODO: Import image to go under header
-
 export const CountdownSection = React.forwardRef((props, ref) => {
   return (
-    <Section ref={ref} background={gradient.greyBlack}>
+    <Section ref={ref} background={gradient.greyBlack} section='section-six'>
       <SectionWrapper>
         <CountdownContainer>
           <BackgroundCircleInnerMd />

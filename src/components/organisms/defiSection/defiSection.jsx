@@ -1,30 +1,15 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, CircleCard, CircleInnerShadow, HorizontalLine } from './defiSection.styles'
+import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, HorizontalLine } from './defiSection.styles'
+import { Circle } from '../../molecules/circle'
 
-import Circle from '../featuresSection/Circle'
-import { GridImage } from '../brandSection/brandSection.styles'
-import LinesImage from '../../../images/middle-lines.png'
-
-import './defiSection.css'
-
-// ❗️ ISSUE: Imported GridImage but does not display (lines 18-22)
-// ❗️ ISSUE: Circle component not rendering header and text props.
 
 export const DefiSection = React.forwardRef((props, ref) => {
   return (
-    <Section ref={ref} background={gradient.greyBlack}>
+    <Section ref={ref} background={gradient.greyBlack} section='section-two'>
       <DefiSectionContainer>
-
-        {/* <GridImage
-          src={require('../../../images/grid.png')}
-          alt=""
-          role="presentation"
-        /> */}
-
         <DefiSectionGrid>
-
           <HeaderContainer>
             <Blockquote>
               "To change something, you must build a new model that makes the

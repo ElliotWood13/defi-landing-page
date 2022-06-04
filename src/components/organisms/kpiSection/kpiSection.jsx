@@ -8,7 +8,7 @@ import Data from './kpiData'
 
 export const KpiSection = React.forwardRef((props, ref) => {
   return (
-    <Section ref={ref} background={gradient.greyBlack}>
+    <Section ref={ref} background={gradient.greyBlack} section='section-five'>
       <KpiSectionImage src={middleSectionImage} />
       <SectionContainer>
         <SectionGrid>

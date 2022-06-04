@@ -5,7 +5,7 @@ import { BrandTagline, GridImage, LogoImage, BrandText, BrandWrapper } from './b
 
 export const BrandSection = React.forwardRef((props, ref) => {
     return (
-        <Section ref={ref} background={gradient.greyBlack}>
+        <Section ref={ref} background={gradient.greyBlack} section='section-one'>
             <BrandWrapper>
                 <GridImage
                     src={require('../../../images/grid.png')}

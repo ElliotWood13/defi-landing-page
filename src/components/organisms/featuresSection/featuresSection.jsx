@@ -2,15 +2,11 @@ import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
 import { FeaturesSectionContainer, FeaturesSectionGrid, HeaderContainer, FeaturesSectionHeader, FeaturesSectionHeaderH2, HorizontalLine } from './featuresSection.styles'
-import Circle from './Circle'
-
-import './featuresSection.css'
-
-// TODO: Make 'color' prop affect Circle component's colour
+import { Circle } from '../../molecules/circle'
 
 export const FeaturesSection = React.forwardRef((props, ref) => {
   return (
-    <Section ref={ref} background={gradient.greyBlack}>
+    <Section ref={ref} background={gradient.greyBlack} section='section-three'>
       <FeaturesSectionContainer>
         <FeaturesSectionGrid>
           <HeaderContainer>
