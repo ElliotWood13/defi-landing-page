@@ -61,7 +61,6 @@ const BrandText = styled.p`
   text-align: center;
   font-size: ${pxToRem(40)};
   font-weight: ${fontWeight.bold};
-  text-shadow: -2px 1px 2px ${color.grey[400]};
   z-index: 1;
 
   ${mediaQuery.xs} {

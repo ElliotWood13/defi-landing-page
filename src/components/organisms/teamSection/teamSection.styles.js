@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color, pxToRem, mediaQuery, fontWeight } from '../../../design'
+import { pxToRem, mediaQuery, fontWeight } from '../../../design'
 
 const TeamSectionHeaderH2 = styled.h2`
   color: white;
@@ -8,7 +8,6 @@ const TeamSectionHeaderH2 = styled.h2`
   text-transform: uppercase;
   text-align: center;
   margin-bottom: ${pxToRem(40)};
-  text-shadow: -2px 1px 2px ${color.grey[400]};
 `
 
 const TeamCardsContainer = styled.div`

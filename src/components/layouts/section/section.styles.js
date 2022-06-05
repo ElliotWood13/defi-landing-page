@@ -7,7 +7,7 @@ const SectionWrapper = styled.section`
   flex-wrap: wrap;
   background: ${(props) => props.background ?? gradient.greyBlack};
   padding: ${pxToRem(50)} ${pxToRem(20)};
-  min-height: 100vh;
+  min-height: 900px;
 
   ${mediaQuery.sm} {
     padding: ${pxToRem(60)} ${pxToRem(20)};
