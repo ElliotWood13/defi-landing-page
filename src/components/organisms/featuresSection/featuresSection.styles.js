@@ -53,9 +53,9 @@ const FeaturesSectionHeader = styled.div`
     z-index: 10;
 
     ${mediaQuery.lg} {
-        white-space: nowrap;
-        transform: translateY(-25px);
-      }
+      white-space: nowrap;
+      transform: translateY(-25px);
+    }
 `
 
 const FeaturesSectionHeaderH2 = styled.h2`
@@ -63,23 +63,20 @@ const FeaturesSectionHeaderH2 = styled.h2`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     color: white;
     font-size: 40px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
     padding: 10px;
-    /* display: inline-block; */
-
     border: 2px solid rgb(252, 252, 233);
     box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);
     border-radius: 3px;
-
     z-index: 50;
 `
 
 const HorizontalLine = styled.div`
+  ${mediaQuery.md} {
     background-color: white;
     position: absolute;
     top: 47%;
@@ -88,6 +85,7 @@ const HorizontalLine = styled.div`
     width: calc(100% + 400px);
     height: 2px;
     z-index: -30;
+  }
 `
 
 export {

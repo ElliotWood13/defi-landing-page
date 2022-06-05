@@ -23,7 +23,7 @@ export const FeaturesSection = React.forwardRef((props, ref) => {
             <FeaturesSectionHeader>
               <FeaturesSectionHeaderH2>Built on the mesh network</FeaturesSectionHeaderH2>
             </FeaturesSectionHeader>
-            {/* <HorizontalLine /> */}
+            <HorizontalLine />
           </HeaderContainer>
 
           <Circle color="white" header="Enhanced Security Network" bottomLine={bottomLines[1]} />
