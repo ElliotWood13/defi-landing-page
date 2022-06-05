@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, Blockquote, BlockquoteName, HorizontalLine } from './defiSection.styles'
+import { DefiSectionContainer, DefiSectionGrid, HeaderContainer, BlockquoteWrapper, Blockquote, BlockquoteName, HorizontalLine } from './defiSection.styles'
 import { Circle } from '../../molecules/circle'
 import { useWindowResize } from '../../../hooks'
 
@@ -20,11 +20,13 @@ export const DefiSection = React.forwardRef((props, ref) => {
       <DefiSectionContainer>
         <DefiSectionGrid>
           <HeaderContainer>
-            <Blockquote>
-              "To change something, you must build a new model that makes the
-              existing model obsolete" <BlockquoteName>- Buckminster Fuller</BlockquoteName>
-              {/* <HorizontalLine /> */}
-            </Blockquote>
+            <BlockquoteWrapper>
+              <Blockquote>
+                "To change something, you must build a new model that makes the
+                existing model obsolete" <BlockquoteName>- Buckminster Fuller</BlockquoteName>
+              </Blockquote>
+            </BlockquoteWrapper>
+            <HorizontalLine />
           </HeaderContainer>
 
           <Circle color="yellow" header="Nft Staking Rewards" text="Option to combine up to four NFT's for up to 32% additional APY

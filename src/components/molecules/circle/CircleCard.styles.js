@@ -29,7 +29,6 @@ const CircleCardInnerShadow = styled.div`
   width: 100%;
   border-radius: 50%;
   background-color: transparent;
-
   box-shadow: ${({ color }) =>
     color === 'yellow' ? `${shadow.yellowInner}` : `${shadow.whiteInner}`};
 `
@@ -62,9 +61,12 @@ const CircleLineBottom = styled.div`
   transform: translateX(-50%);
   width: ${pxToRem(2)};
   height: ${pxToRem(52)};
-  background-color: ${color.white[100]};
-  box-shadow: ${({ color }) =>
-    color === 'yellow' ? `${shadow.yellowInner}` : `${shadow.whiteInner}`};
+  background-color: ${(props) =>
+    props.color === 'yellow' ? `${color.brand}` : `${color.white[100]}`};
+  box-shadow: ${(props) =>
+    props.color === 'yellow'
+      ? `0px 0px 19px 1px ${color.brand};`
+      : `0px 0px 19px 1px ${color.white[100]};`};
 `
 
 export {

@@ -47,6 +47,17 @@ const HeaderContainer = styled.div`
   }
 `
 
+const BlockquoteWrapper = styled.div`
+  ${mediaQuery.md} {
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.5),
+      3px 2px 20px 5px rgba(255, 255, 255, 0.5) inset;
+    background-color: black;
+    border-radius: 3px;
+  }
+`
+
 const Blockquote = styled.blockquote`
   filter: drop-shadow(0px 0px 4px #9a9a9a);
   background: linear-gradient(to bottom, lightgray, gray);
@@ -63,11 +74,11 @@ const Blockquote = styled.blockquote`
 
   ${mediaQuery.md} {
     max-width: ${pxToRem(300)};
+    padding: ${pxToRem(18)};
   }
 `
 
 const BlockquoteName = styled.span`
-  color: blue;
   display: block;
   font-size: ${pxToRem(18)};
   font-weight: 600;
@@ -102,19 +113,23 @@ const CircleInnerShadow = styled.div`
 `
 
 const HorizontalLine = styled.div`
-  background-color: ${color.brand};
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: calc(100% + 400px);
-  height: 2px;
+  ${mediaQuery.md} {
+    background-color: ${color.brand};
+    box-shadow: 0px 0px 19px 1px ${color.brand};
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: calc(100% + 400px);
+    height: ${pxToRem(2)};
+  }
 `
 
 export {
   DefiSectionContainer,
   DefiSectionGrid,
   HeaderContainer,
+  BlockquoteWrapper,
   Blockquote,
   BlockquoteName,
   Circle,

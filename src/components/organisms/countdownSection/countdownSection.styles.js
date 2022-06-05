@@ -92,7 +92,7 @@ const CountdownCircle = styled.div`
     width: ${pxToRem(300)};
     height: ${pxToRem(300)};
     border-radius: 50%;
-    border: 1px solid yellow;
+    border: 1px solid ${color.brand};
     box-shadow: 0 0 10px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.5);
   }
 `

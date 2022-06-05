@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, mediaQuery } from '../../../design'
+import { pxToRem, mediaQuery, color } from '../../../design'
 
 const FeaturesSectionContainer = styled.div`
   display: flex;
@@ -47,37 +47,39 @@ const HeaderContainer = styled.div`
 `
 
 const FeaturesSectionHeader = styled.div`
-    box-shadow: 3px 5px 20px 5px rgba(255, 255, 255, .5) inset;
-    display: inline-block;
-    background-color: black;
-    z-index: 10;
+  box-shadow: 3px 5px 20px 5px rgba(255, 255, 255, 0.5) inset;
+  display: inline-block;
+  background-color: black;
+  z-index: 10;
 
-    ${mediaQuery.lg} {
-      white-space: nowrap;
-      transform: translateY(-25px);
-    }
+  ${mediaQuery.lg} {
+    white-space: nowrap;
+    transform: translateY(-25px);
+  }
 `
 
 const FeaturesSectionHeaderH2 = styled.h2`
-    background: linear-gradient(to right, lightgray, gray);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: white;
-    font-size: 40px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px;
-    border: 2px solid rgb(252, 252, 233);
-    box-shadow: 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .5);
-    border-radius: 3px;
-    z-index: 50;
+  background: linear-gradient(to right, lightgray, gray);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid rgb(252, 252, 233);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  z-index: 50;
 `
 
 const HorizontalLine = styled.div`
   ${mediaQuery.md} {
-    background-color: white;
+    background-color: ${color.white[100]};
+    box-shadow: 0px 0px 19px 1px ${color.white[100]};
     position: absolute;
     top: 47%;
     left: 50%;
