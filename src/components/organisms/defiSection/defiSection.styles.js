@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, mediaQuery, shadow } from '../../../design'
+import { pxToRem, mediaQuery, shadow, color } from '../../../design'
 
 const DefiSectionContainer = styled.div`
   display: flex;
@@ -102,7 +102,7 @@ const CircleInnerShadow = styled.div`
 `
 
 const HorizontalLine = styled.div`
-  background-color: yellow;
+  background-color: ${color.brand};
   position: absolute;
   top: 46%;
   left: 50%;
