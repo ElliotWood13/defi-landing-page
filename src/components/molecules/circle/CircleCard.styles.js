@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
+import { pxToRem, shadow, color, fontWeight } from '../../../design'
 
 const CircleCard = styled.div`
   width: ${pxToRem(300)};
@@ -65,11 +65,6 @@ const CircleLineBottom = styled.div`
   background-color: ${color.white[100]};
   box-shadow: ${({ color }) =>
     color === 'yellow' ? `${shadow.yellowInner}` : `${shadow.whiteInner}`};
-
-  // ADD ID TO CIRCLE (PROPS) - REMOVE IF ID === ___
-  ${mediaQuery.sm} {
-    // display: none;
-  }
 `
 
 export {

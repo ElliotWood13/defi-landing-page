@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
+import { pxToRem, mediaQuery, shadow } from '../../../design'
 
 const DefiSectionContainer = styled.div`
   display: flex;
@@ -11,7 +11,6 @@ const DefiSectionGrid = styled.div`
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(5, auto);
   grid-gap: ${pxToRem(50)};
-  /* grid-template-areas: "quote", "circle", "circle", "circle", "circle"; */
 
   ${mediaQuery.sm} {
     grid-template-columns: repeat(2, ${pxToRem(300)});
@@ -88,7 +87,6 @@ const Circle = styled.div`
   background-color: transparent;
   position: relative;
   border: ${pxToRem(2)} solid rgb(252, 252, 233);
-  // border: ${pxToRem(2)} solid ${(color) => color};
   box-shadow: ${shadow.yellowOuter};
 `
 

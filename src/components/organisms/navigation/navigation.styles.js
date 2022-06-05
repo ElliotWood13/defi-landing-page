@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, mediaQuery, color, fontWeight } from '../../../design'
+import { pxToRem, color, fontWeight } from '../../../design'
 import { Svg } from '../../../helpers/svgMapper'
 
 const NavigationWrapper = styled.div`
@@ -10,7 +10,7 @@ const NavigationWrapper = styled.div`
     `
       background: #000;
       box-shadow: 0px 0px 15px 13px #000;
-      padding: ${pxToRem(20)};  
+      padding: ${pxToRem(20)};
   `}
 `
 

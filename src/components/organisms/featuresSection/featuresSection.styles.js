@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, mediaQuery, shadow, color, fontWeight } from '../../../design'
+import { pxToRem, mediaQuery } from '../../../design'
 
 const FeaturesSectionContainer = styled.div`
   display: flex;
@@ -81,7 +81,7 @@ const FeaturesSectionHeaderH2 = styled.h2`
 
 const HorizontalLine = styled.div`
     background-color: white;
-    position: absolute; 
+    position: absolute;
     top: 47%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
@@ -89,8 +89,6 @@ const HorizontalLine = styled.div`
     height: 2px;
     z-index: -30;
 `
-
-
 
 export {
   FeaturesSectionContainer,

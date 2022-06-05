@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import FocusTrap from 'focus-trap-react'
+// import FocusTrap from 'focus-trap-react'
 import {
   NavigationWrapper,
   Burger,
@@ -10,14 +10,10 @@ import {
   LinkItem,
   StyledLink,
 } from './navigation.styles'
-import { useScrollLock } from '../../../hooks'
 import { useWindowResize } from '../../../hooks'
-import { color } from '../../../design'
 
 export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
-  // TODO: Work out why it only navigates every other time
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [, setScrollLockActive] = useScrollLock()
   const [width] = useWindowResize()
   const {
     brandSectionRef,
@@ -28,7 +24,6 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
     countdownSectionRef,
   } = ref.current
 
-  
   const links = [
     {
       id: '1',
@@ -62,14 +57,6 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
     },
   ]
 
-  // useEffect(() => {
-  //   if (mobileMenuOpen) {
-  //     setScrollLockActive(true)
-  //   } else {
-  //     setScrollLockActive(false)
-  //   }
-  // }, [mobileMenuOpen, setScrollLockActive])
-
   useEffect(() => {
     setMobileMenuOpen(false)
   }, [width])
@@ -82,7 +69,6 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
         aria-controls="menu"
         onClick={() => setMobileMenuOpen(prevState => !prevState)}
       >
-        {/* <BurgerSvg type="burger" fill={color.body} /> */}
         <BurgerMenu isActive={mobileMenuOpen}>
           <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
           <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
@@ -97,7 +83,7 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
           >
             <StyledLink
               href={`#${link.name}`}
-              onClick={() => { 
+              onClick={() => {
                 setMobileMenuOpen(false)
                 handleScroll(link.ref)
               }}
@@ -108,27 +94,6 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
         ))}
         </LinkList>
       </Nav>
-      {/* <FocusTrap active={mobileMenuOpen}>
-        <Nav role="navigation" mobileMenuOpen={mobileMenuOpen}>
-          <LinkList id="menu">
-            {links.map((link) => (
-              <LinkItem
-                key={link.id}
-              >
-                <StyledLink
-                  href='#'
-                  onClick={() => { 
-                    setMobileMenuOpen(false)
-                    handleScroll(link.ref)
-                  }}
-                >
-                  {link.name}
-                </StyledLink>
-              </LinkItem>
-            ))}
-          </LinkList>
-        </Nav>
-      </FocusTrap> */}
     </NavigationWrapper>
   )
 })
