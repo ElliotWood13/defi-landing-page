@@ -27,8 +27,8 @@ const BackgroundCircleInnerMd = styled.div`
     transform: translate(-50%, -50%);
     border: 1px solid rgba(255, 255, 0, 0.3);
     border-radius: 50%;
-    width: ${pxToRem(320)};
-    height: ${pxToRem(320)};
+    width: ${pxToRem(365)};
+    height: ${pxToRem(365)};
   }
 `
 
@@ -43,8 +43,8 @@ const BackgroundCircleOuterMd = styled.div`
     transform: translate(-50%, -50%);
     border: 1px solid rgba(255, 255, 0, 0.3);
     border-radius: 50%;
-    width: ${pxToRem(340)};
-    height: ${pxToRem(340)};
+    width: ${pxToRem(375)};
+    height: ${pxToRem(375)};
   }
 `
 
@@ -59,8 +59,8 @@ const BackgroundCircleInnerLg = styled.div`
     transform: translate(-50%, -50%);
     border: 1px solid rgba(255, 255, 0, 0.3);
     border-radius: 50%;
-    width: ${pxToRem(600)};
-    height: ${pxToRem(600)};
+    width: ${pxToRem(700)};
+    height: ${pxToRem(700)};
   }
 `
 
@@ -73,10 +73,11 @@ const BackgroundCircleOuterLg = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid rgba(255, 255, 0, 0.3);
+    border: 1px solid ${color.white[100]};
+    opacity: 0.3;
     border-radius: 50%;
-    width: ${pxToRem(630)};
-    height: ${pxToRem(630)};
+    width: ${pxToRem(720)};
+    height: ${pxToRem(720)};
   }
 `
 
@@ -89,11 +90,11 @@ const CountdownCircle = styled.div`
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: ${pxToRem(300)};
-    height: ${pxToRem(300)};
+    width: ${pxToRem(345)};
+    height: ${pxToRem(345)};
     border-radius: 50%;
     border: 1px solid ${color.brand};
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.5);
+    box-shadow: 0 0 6px ${color.brand}, 0 0 6px ${color.brand};
   }
 `
 
@@ -149,7 +150,7 @@ const IconsWrapper = styled.div`
 
   ${mediaQuery.sm} {
     position: absolute;
-    bottom: -${pxToRem(174)};
+    bottom: -${pxToRem(206)};
     transform: translate(-50%);
     left: 50%;
     width: auto;
@@ -157,8 +158,8 @@ const IconsWrapper = styled.div`
 `
 
 const StyledSvg = styled(Svg)`
-  height: ${pxToRem(30)};
-  width: ${pxToRem(30)};
+  height: ${pxToRem(40)};
+  width: ${pxToRem(40)};
 `
 
 const DiscordSvgWrapper = styled.a`
@@ -166,17 +167,19 @@ const DiscordSvgWrapper = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${pxToRem(80)};
-  height: ${pxToRem(80)};
   transition: all 0.3s;
   background-color: rgb(50, 50, 50);
   border: none;
   border-radius: 50%;
   margin: ${pxToRem(8)};
+  padding: ${pxToRem(10)};
+
+  path {
+    fill: ${color.white[100]};
+  }
 
   :hover {
-    transform: scale(120%);
-    filter: brightness(120%);
+    transform: scale(1.1);
   }
 
   ${mediaQuery.xxs} {
@@ -189,17 +192,19 @@ const TwitterSvgWrapper = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${pxToRem(80)};
-  height: ${pxToRem(80)};
   transition: all 0.3s;
   background-color: rgb(50, 50, 50);
   border: none;
   border-radius: 10px;
   margin: ${pxToRem(8)};
+  padding: ${pxToRem(10)};
+
+  path {
+    fill: ${color.white[100]};
+  }
 
   :hover {
-    transform: scale(120%);
-    filter: brightness(120%);
+    transform: scale(1.1);
   }
 
   ${mediaQuery.xxs} {
@@ -212,17 +217,17 @@ const MediumSvgWrapper = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${pxToRem(80)};
-  height: ${pxToRem(80)};
   transition: all 0.3s;
-  background-color: rgb(50, 50, 50);
   border: none;
   border-radius: 50%;
   margin: ${pxToRem(8)};
 
+  path {
+    fill: ${color.white[100]};
+  }
+
   :hover {
-    transform: scale(120%);
-    filter: brightness(120%);
+    transform: scale(1.1);
   }
 
   ${mediaQuery.xxs} {
