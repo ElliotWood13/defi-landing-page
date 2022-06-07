@@ -6,7 +6,6 @@ export const pxToRem = (px) => {
 
 export const font = {}
 
-// TODO: Update fontWeight to use 100: '100' etc
 export const fontWeight = {
   light: '300',
   normal: '400',

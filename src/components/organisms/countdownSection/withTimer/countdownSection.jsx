@@ -1,19 +1,12 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import Circle from '../featuresSection/Circle' /* Change path when moved to modules folder */
 
 import { Discord } from '../../atoms/icons/discord'
 import { Twitter } from '../../atoms/icons/twitter'
 import { Medium } from '../../atoms/icons/medium'
 
 import './countdownSection.css'
-
-// TODO: Fix countdown timer shadow (currently too big)
-// TODO: Convert to components
-// ❗️ TODO: Make button icons bigger
-// ❗️ TODO: Make header text smaller on large screens
-// ❗️ TODO: Import image to go under header
 
 export const CountdownSection = React.forwardRef((props, ref) => {
   return (
@@ -23,12 +16,6 @@ export const CountdownSection = React.forwardRef((props, ref) => {
         <div className="background-circle bg-circle--md-outer"></div>
         <div className="background-circle bg-circle--lg"></div>
         <div className="background-circle bg-circle--lg-outer"></div>
-
-
-        {/* <Circle color="yellow" /> */}
-
-
-        {/* <h2>Defi 3.0 Begins Here</h2> */}
 
         <div className="icons">
           <button className="icons__button btn-round">
@@ -42,11 +29,6 @@ export const CountdownSection = React.forwardRef((props, ref) => {
           </button>
         </div>
 
-        {/* <div className="circle-container"> */}
-        {/* <div className="circle"></div>
-        <h3>Defi 3.0</h3>
-        <h3>starts here</h3> */}
-        {/* </div> */}
         <div className="countdown-circle"></div>
 
         <div className="header">

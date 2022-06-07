@@ -89,7 +89,6 @@ const LinkList = styled.ul`
 `
 
 const LinkItem = styled.li`
-  // TODO: Look at whether list is accessible as list-style-type: none removes number of options from screen reader
   list-style-type: none;
   color: ${color.body};
   font-weight: ${fontWeight.bold};

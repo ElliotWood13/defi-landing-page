@@ -9,8 +9,6 @@ import { KpiSection } from './components/organisms/kpiSection/kpiSection'
 import { TeamSection } from './components/organisms/teamSection'
 import { Navigation } from './components/organisms/navigation'
 
-// TODO: Update logo192 and logo512 in index.html
-
 function App() {
   const brandSectionRef = useRef(null)
   const uspSectionRef = useRef(null)
