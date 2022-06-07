@@ -15,6 +15,7 @@ const FeaturesSectionGrid = styled.div`
   ${mediaQuery.sm} {
     grid-template-columns: repeat(2, ${pxToRem(300)});
     grid-template-rows: repeat(3, auto);
+    row-gap: ${pxToRem(100)};
   }
 
   ${mediaQuery.md} {

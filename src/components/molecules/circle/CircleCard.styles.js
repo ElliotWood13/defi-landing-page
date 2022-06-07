@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, shadow, color, fontWeight } from '../../../design'
+import { pxToRem, shadow, color, fontWeight, mediaQuery } from '../../../design'
 
 const CircleCard = styled.div`
   width: ${pxToRem(300)};
@@ -67,6 +67,10 @@ const CircleLineBottom = styled.div`
     props.color === 'yellow'
       ? `0px 0px 19px 1px ${color.brand};`
       : `0px 0px 19px 1px ${color.white[100]};`};
+
+  ${mediaQuery.sm} {
+    height: ${pxToRem(103)};
+  }
 `
 
 export {
