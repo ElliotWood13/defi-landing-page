@@ -45,7 +45,7 @@ export const shadow = {
 }
 
 export const gradient = {
-  greyBlack: `linear-gradient(90deg, rgba(69,69,69,1) 0%, rgba(12,12,12,1) 15%, rgba(0,0,0,1) 85%, rgba(69,69,69,1) 100%);`,
+  greyBlack: `linear-gradient(90deg, rgba(69,69,69,1) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(69,69,69,1) 100%);`,
 }
 
 export const breakpoint = {

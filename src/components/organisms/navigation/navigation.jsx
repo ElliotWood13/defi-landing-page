@@ -64,6 +64,7 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
   return (
     <NavigationWrapper isActive={mobileMenuOpen}>
       <Burger
+        mobileMenuOpen={mobileMenuOpen}
         aria-label="menu"
         aria-expanded={mobileMenuOpen}
         aria-controls="menu"
