@@ -47,17 +47,6 @@ const HeaderContainer = styled.div`
   }
 `
 
-const BlockquoteWrapper = styled.div`
-  ${mediaQuery.md} {
-    z-index: 1;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
-      0 0 20px rgba(255, 255, 255, 0.5),
-      3px 2px 20px 5px rgba(255, 255, 255, 0.5) inset;
-    background-color: black;
-    border-radius: 3px;
-  }
-`
-
 const Blockquote = styled.blockquote`
   filter: drop-shadow(0px 0px 4px #9a9a9a);
   background: linear-gradient(to bottom, lightgray, gray);
@@ -129,7 +118,6 @@ export {
   DefiSectionContainer,
   DefiSectionGrid,
   HeaderContainer,
-  BlockquoteWrapper,
   Blockquote,
   BlockquoteName,
   Circle,

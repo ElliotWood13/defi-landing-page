@@ -45,13 +45,13 @@ const LogoImage = styled.img`
   }
 
   ${mediaQuery.xs} {
-    height: ${pxToRem(412)};
-    width: ${pxToRem(412)};
+    height: ${pxToRem(492)};
+    width: ${pxToRem(460)};
   }
 
   ${mediaQuery.sm} {
-    height: ${pxToRem(428)};
-    width: ${pxToRem(428)};
+    height: ${pxToRem(604)};
+    width: ${pxToRem(556)};
   }
 `
 

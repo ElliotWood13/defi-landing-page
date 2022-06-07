@@ -19,7 +19,7 @@ const LinesImage = styled.img`
 
   ${mediaQuery.sm} {
     display: block;
-    width: 300px;
+    width: ${pxToRem(220)};
     height: 100%;
     position: absolute;
     top: 0;
