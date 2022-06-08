@@ -17,8 +17,11 @@ export const BrandSection = React.forwardRef((props, ref) => {
                     alt=""
                     role="presentation"
                 />
+                <div>
+
                 <BrandText>Impact Defi</BrandText>
                 <BrandTagline>The future lives on the mesh</BrandTagline>
+                </div>
             </BrandWrapper>
         </Section>
     )
