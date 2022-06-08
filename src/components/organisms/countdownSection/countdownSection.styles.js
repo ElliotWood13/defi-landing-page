@@ -25,10 +25,16 @@ const BackgroundCircleInnerMd = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid rgba(255, 255, 0, 0.3);
+    border: 1px solid ${color.white[100]};
+    opacity: 0.3;
     border-radius: 50%;
     width: ${pxToRem(365)};
     height: ${pxToRem(365)};
+  }
+
+  ${mediaQuery.md} {
+    width: ${pxToRem(445)};
+    height: ${pxToRem(445)};
   }
 `
 
@@ -41,10 +47,16 @@ const BackgroundCircleOuterMd = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid rgba(255, 255, 0, 0.3);
+    border: 1px solid ${color.white[100]};
+    opacity: 0.3;
     border-radius: 50%;
     width: ${pxToRem(375)};
     height: ${pxToRem(375)};
+  }
+
+  ${mediaQuery.md} {
+    width: ${pxToRem(455)};
+    height: ${pxToRem(455)};
   }
 `
 
@@ -59,8 +71,13 @@ const BackgroundCircleInnerLg = styled.div`
     transform: translate(-50%, -50%);
     border: 1px solid rgba(255, 255, 0, 0.3);
     border-radius: 50%;
-    width: ${pxToRem(700)};
-    height: ${pxToRem(700)};
+    width: ${pxToRem(740)};
+    height: ${pxToRem(740)};
+  }
+
+  ${mediaQuery.md} {
+    width: ${pxToRem(810)};
+    height: ${pxToRem(810)};
   }
 `
 
@@ -76,8 +93,13 @@ const BackgroundCircleOuterLg = styled.div`
     border: 1px solid ${color.white[100]};
     opacity: 0.3;
     border-radius: 50%;
-    width: ${pxToRem(720)};
-    height: ${pxToRem(720)};
+    width: ${pxToRem(760)};
+    height: ${pxToRem(760)};
+  }
+
+  ${mediaQuery.md} {
+    width: ${pxToRem(840)};
+    height: ${pxToRem(840)};
   }
 `
 
@@ -95,6 +117,11 @@ const CountdownCircle = styled.div`
     border-radius: 50%;
     border: 1px solid ${color.brand};
     box-shadow: 0 0 6px ${color.brand}, 0 0 6px ${color.brand};
+  }
+
+  ${mediaQuery.md} {
+    width: ${pxToRem(425)};
+    height: ${pxToRem(425)};
   }
 `
 
@@ -154,6 +181,10 @@ const IconsWrapper = styled.div`
     transform: translate(-50%);
     left: 50%;
     width: auto;
+  }
+
+  ${mediaQuery.md} {
+    bottom: -${pxToRem(254)};
   }
 `
 
