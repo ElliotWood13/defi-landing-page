@@ -11,12 +11,11 @@ const GridImage = styled.img`
   height: ${pxToRem(436)};
   width: ${pxToRem(312)};
   position: absolute;
-  top: 38%;
+  top: 45%;
   right: 50%;
   transform: translate(50%, -50%);
 
   ${mediaQuery.xxs} {
-    top: 40%;
     height: ${pxToRem(516)};
     width: ${pxToRem(392)};
   }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-// import FocusTrap from 'focus-trap-react'
+import React, { useEffect, useState, useRef } from 'react'
+import FocusTrap from 'focus-trap-react'
 import {
   NavigationWrapper,
   Burger,
@@ -61,40 +61,57 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
     setMobileMenuOpen(false)
   }, [width])
 
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+          if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setMobileMenuOpen(false);
+          }
+      };
+
+      document.addEventListener('click', handleClickOutside, true);
+      return () => {
+          document.removeEventListener('click', handleClickOutside, true);
+      };
+  }, [menuRef]);
+
   return (
-    <NavigationWrapper isActive={mobileMenuOpen}>
-      <Burger
-        mobileMenuOpen={mobileMenuOpen}
-        aria-label="menu"
-        aria-expanded={mobileMenuOpen}
-        aria-controls="menu"
-        onClick={() => setMobileMenuOpen(prevState => !prevState)}
-      >
-        <BurgerMenu isActive={mobileMenuOpen}>
-          <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
-          <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
-          <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
-        </BurgerMenu>
-      </Burger>
-      <Nav mobileMenuOpen={mobileMenuOpen}>
-        <LinkList id="menu">
-        {links.map((link) => (
-          <LinkItem
-            key={link.id}
-          >
-            <StyledLink
-              href={`#${link.name}`}
-              onClick={() => {
-                setMobileMenuOpen(false)
-                handleScroll(link.ref)
-              }}
-            >
-              {link.name}
-            </StyledLink>
-          </LinkItem>
-        ))}
-        </LinkList>
-      </Nav>
-    </NavigationWrapper>
+    <FocusTrap active={mobileMenuOpen}>
+      <NavigationWrapper isActive={mobileMenuOpen} ref={menuRef}>
+        <Burger
+          mobileMenuOpen={mobileMenuOpen}
+          aria-label="menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="menu"
+          onClick={() => setMobileMenuOpen(prevState => !prevState)}
+        >
+          <BurgerMenu isActive={mobileMenuOpen}>
+            <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
+            <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
+            <BurgerMenuLine isActive={mobileMenuOpen}></BurgerMenuLine>
+          </BurgerMenu>
+        </Burger>
+          <Nav mobileMenuOpen={mobileMenuOpen}>
+            <LinkList id="menu">
+            {links.map((link) => (
+              <LinkItem
+                key={link.id}
+              >
+                <StyledLink
+                  href={`#${link.name}`}
+                  onClick={() => {
+                    setMobileMenuOpen(false)
+                    handleScroll(link.ref)
+                  }}
+                >
+                  {link.name}
+                </StyledLink>
+              </LinkItem>
+            ))}
+            </LinkList>
+          </Nav>
+      </NavigationWrapper>
+    </FocusTrap>
   )
 })

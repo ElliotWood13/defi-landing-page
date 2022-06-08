@@ -55,7 +55,7 @@ const FeaturesSectionHeader = styled.div`
 
   ${mediaQuery.lg} {
     white-space: nowrap;
-    transform: translateY(-25px);
+    transform: translateY(-50px);
   }
 `
 
