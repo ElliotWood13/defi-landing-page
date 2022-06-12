@@ -89,7 +89,7 @@ const LinkItem = styled.li`
 
   :hover {
     text-shadow: 0px 1px 8px ${color.brand};
-    box-shadow: 0px 0px 13px 1px ${color.brand};
+    box-shadow: 0px 0px 8px -1px ${color.brand};
   }
 `
 
