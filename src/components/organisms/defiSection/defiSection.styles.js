@@ -49,15 +49,17 @@ const HeaderContainer = styled.div`
 `
 
 const BlockquoteWrapper = styled.div`
-  box-shadow: 0px -13px 22px 13px #000, 0px 13px 22px 13px #000,
-    0px 0px 19px 20px #000 inset;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.7122199221485469) 0%,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(0, 0, 0, 1) 90%,
-    rgba(0, 0, 0, 0.71) 100%
-  );
+  ${mediaQuery.md} {
+    box-shadow: 0px -13px 22px 13px #000, 0px 13px 22px 13px #000,
+      0px 0px 19px 20px #000 inset;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7122199221485469) 0%,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0.71) 100%
+    );
+  }
 `
 
 const Blockquote = styled.blockquote`

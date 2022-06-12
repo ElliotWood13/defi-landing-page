@@ -130,7 +130,20 @@ const HeaderWrapper = styled.div`
   text-align: center;
   width: 100%;
   max-width: ${pxToRem(300)};
+  margin-top: ${pxToRem(30)};
   margin-bottom: ${pxToRem(50)};
+
+  ${mediaQuery.sm} {
+    box-shadow: 0px -13px 22px 13px #000, 0px 13px 22px 13px #000,
+      0px 0px 19px 20px #000 inset;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7122199221485469) 0%,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0.71) 100%
+    );
+  }
 `
 
 const HeaderTop = styled.h3`
@@ -142,7 +155,6 @@ const HeaderTop = styled.h3`
     0 0 15px rgba(255, 255, 0, 0.3), 0 0 20px rgba(255, 255, 0, 0.3),
     0 0 30px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3),
     0 0 55px rgba(255, 255, 0, 0.3), 0 0 75px rgba(255, 255, 0, 0.3);
-  margin-top: ${pxToRem(30)};
   margin-bottom: -${pxToRem(20)};
 
   ${mediaQuery.sm} {

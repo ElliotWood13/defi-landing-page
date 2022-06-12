@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { BrandTagline, GridImage, LogoImage, BrandText, BrandWrapper } from './brandSection.styles'
+import { BrandTagline, GridImage, LogoImage, BrandHeaderWrapper, BrandText, BrandWrapper } from './brandSection.styles'
 
 export const BrandSection = React.forwardRef((props, ref) => {
     return (
@@ -17,12 +17,11 @@ export const BrandSection = React.forwardRef((props, ref) => {
                     alt=""
                     role="presentation"
                 />
-                <div>
-
+            </BrandWrapper>
+            <BrandHeaderWrapper>
                 <BrandText>Impact Defi</BrandText>
                 <BrandTagline>The future lives on the mesh</BrandTagline>
-                </div>
-            </BrandWrapper>
+            </BrandHeaderWrapper>
         </Section>
     )
 })
