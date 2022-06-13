@@ -42,7 +42,7 @@ const HeaderContainer = styled.div`
 
   ${mediaQuery.md} {
     grid-column: 2 / 3;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
     height: 100%;
   }
 `

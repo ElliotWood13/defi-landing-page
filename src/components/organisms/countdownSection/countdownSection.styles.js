@@ -1,6 +1,36 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { mediaQuery, pxToRem, color, fontWeight } from '../../../design'
 import { Svg } from '../../../helpers/svgMapper'
+
+const circleOuterLgShadow = keyframes`
+  50% {
+    box-shadow: 0 0 49px #fffc66, 0 0 66px ${color.brand};
+  }
+`
+
+const countdownCircleShadow = keyframes`
+  50% {
+    box-shadow: 0 0 49px ${color.brand}, 0 0 6px ${color.brand};
+  }
+`
+
+const headerTopShadow = keyframes`
+  50% {
+    text-shadow: 0 0 25px rgba(255, 255, 0, 0.3), 0 0 30px rgba(255, 255, 0, 0.3),
+    0 0 35px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.3),
+    0 0 50px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.3),
+    0 0 75px rgba(255, 255, 0, 0.3), 0 0 95px rgba(255, 255, 0, 0.3);
+  }
+`
+
+const headerBottomShadow = keyframes`
+  50% {
+    text-shadow: 0 0 25px rgba(255, 255, 0, 0.3), 0 0 30px rgba(255, 255, 0, 0.3),
+    0 0 35px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3),
+    0 0 50px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.3),
+    0 0 75px rgba(255, 255, 0, 0.3), 0 0 95px rgba(255, 255, 0, 0.3);
+  }
+`
 
 const SectionWrapper = styled.div`
   position: relative;
@@ -95,6 +125,8 @@ const BackgroundCircleOuterLg = styled.div`
     border-radius: 50%;
     width: ${pxToRem(760)};
     height: ${pxToRem(760)};
+    box-shadow: 0 0 29px #fffc66, 0 0 46px ${color.brand};
+    animation: ${circleOuterLgShadow} 3s linear infinite;
   }
 
   ${mediaQuery.md} {
@@ -117,6 +149,7 @@ const CountdownCircle = styled.div`
     border-radius: 50%;
     border: 1px solid ${color.brand};
     box-shadow: 0 0 6px ${color.brand}, 0 0 6px ${color.brand};
+    animation: ${countdownCircleShadow} 3s linear infinite;
   }
 
   ${mediaQuery.md} {
@@ -156,6 +189,7 @@ const HeaderTop = styled.h3`
     0 0 30px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3),
     0 0 55px rgba(255, 255, 0, 0.3), 0 0 75px rgba(255, 255, 0, 0.3);
   margin-bottom: -${pxToRem(20)};
+  animation: ${headerTopShadow} 3s linear infinite;
 
   ${mediaQuery.sm} {
     font-size: ${pxToRem(60)};
@@ -171,6 +205,7 @@ const HeaderBottom = styled.h3`
     0 0 30px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3),
     0 0 55px rgba(255, 255, 0, 0.3), 0 0 75px rgba(255, 255, 0, 0.3);
   font-size: ${pxToRem(42)};
+  animation: ${headerBottomShadow} 3s linear infinite;
 
   ${mediaQuery.sm} {
     font-size: ${pxToRem(36)};
