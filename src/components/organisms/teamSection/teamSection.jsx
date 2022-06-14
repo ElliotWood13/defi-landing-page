@@ -54,7 +54,7 @@ export const TeamSection = React.forwardRef((props, ref) => {
       <Section ref={ref} background={gradient.greyBlack} section='section-four'>
         <TeamSectionHeaderH2>Team</TeamSectionHeaderH2>
         <TeamCardsContainer>
-          { team.map(teamMember => <TeamCard id={teamMember.id} name={teamMember.name} position={teamMember.position} imageSrc={teamMember.imgSrc} />) }
+          { team.map(teamMember => <TeamCard key={teamMember.id} name={teamMember.name} position={teamMember.position} imageSrc={teamMember.imgSrc} />) }
         </TeamCardsContainer>
       </Section>
     )

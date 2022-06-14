@@ -45,6 +45,10 @@ const HeaderContainer = styled.div`
     grid-row: 1 / 3;
     height: 100%;
   }
+
+  ${mediaQuery.lg} {
+    margin-top: ${pxToRem(55)};
+  }
 `
 
 const FeaturesSectionHeader = styled.div`
