@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 import { pxToRem, mediaQuery, fontWeight } from '../../../design'
 
+const TeamContainer = styled.div`
+  position: relative;
+`
+
 const TeamCardsContainer = styled.div`
   display: grid;
   gap: ${pxToRem(32)} ${pxToRem(32)};
 
   ${mediaQuery.sm} {
-    position: relative;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -17,8 +20,8 @@ const TeamCardsContainer = styled.div`
 
 const TeamSectionHeaderWrapper = styled.div`
   ${mediaQuery.sm} {
-    position: absolute;
-    top: -${pxToRem(50)};
+    width: fit-content;
+    margin: 0 auto;
     box-shadow: 0px -13px 22px 13px #000, 0px 13px 22px 13px #000,
       0px 0px 19px 20px #000 inset, 20px 0px 22px 20px #000,
       -20px 0px 22px 20px #000;
@@ -39,9 +42,15 @@ const TeamSectionHeaderH2 = styled.h2`
   text-transform: uppercase;
   text-align: center;
   margin-bottom: ${pxToRem(40)};
+  width: ${pxToRem(150)};
 
   ${mediaQuery.sm} {
-    margin-bottom: 0;
+    margin-bottom: ${pxToRem(68)};
   }
 `
-export { TeamSectionHeaderWrapper, TeamSectionHeaderH2, TeamCardsContainer }
+export {
+  TeamContainer,
+  TeamSectionHeaderWrapper,
+  TeamSectionHeaderH2,
+  TeamCardsContainer,
+}
