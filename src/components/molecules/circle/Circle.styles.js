@@ -34,6 +34,7 @@ const CircleCardInnerShadow = styled.div`
 `
 
 const CircleHeaderH3 = styled.h3`
+  ${({ color }) => color === 'yellow' && `max-width: ${pxToRem(165)};`}
   color: ${color.white[100]};
   font-size: ${pxToRem(24)};
   font-weight: ${fontWeight.medium};
@@ -50,7 +51,7 @@ const CircleText = styled.p`
   text-align: center;
   font-size: ${pxToRem(18)};
   font-weight: ${fontWeight.light};
-  margin: ${pxToRem(20)};
+  margin: ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(20)};
   z-index: 10;
 `
 
@@ -62,7 +63,7 @@ const CircleLineBottom = styled.div`
   width: ${pxToRem(2)};
   height: ${pxToRem(52)};
   background-color: ${(props) =>
-    props.color === 'yellow' ? `${color.brand}` : `${color.white[100]}`};
+    props.color === 'yellow' ? `#fffc66a1` : `${color.white[100]}`};
   box-shadow: ${(props) =>
     props.color === 'yellow'
       ? `0px 0px 19px 1px ${color.brand};`

@@ -1,5 +1,11 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { pxToRem, mediaQuery, color, fontWeight } from '../../../design'
+
+const logoPulse = keyframes`
+  50% {
+    transform: scale(1.01)
+  }
+`
 
 const BrandWrapper = styled.div`
   display: flex;
@@ -37,6 +43,7 @@ const LogoImage = styled.img`
   width: ${pxToRem(252)};
   margin: 0 auto;
   z-index: 1;
+  animation: ${logoPulse} 2s linear infinite;
 
   ${mediaQuery.xxs} {
     height: ${pxToRem(364)};

@@ -7,6 +7,14 @@ const SectionContainer = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  ${mediaQuery.sm} {
+    padding: ${pxToRem(70)} 0 ${pxToRem(50)} 0;
+  }
+
+  ${mediaQuery.md} {
+    padding: ${pxToRem(75)} 0 ${pxToRem(130)} 0;
+  }
 `
 
 const SectionGrid = styled.div`

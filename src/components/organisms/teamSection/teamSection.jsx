@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { TeamSectionHeaderH2, TeamCardsContainer } from './teamSection.styles'
+import { TeamSectionHeaderWrapper, TeamSectionHeaderH2, TeamCardsContainer } from './teamSection.styles'
 import { TeamCard } from '../../molecules/teamCard'
 
 export const TeamSection = React.forwardRef((props, ref) => {
@@ -33,7 +33,7 @@ export const TeamSection = React.forwardRef((props, ref) => {
     {
       id: 5,
       name: 'Tommy',
-      position: 'CFO',
+      position: 'CTO',
       imgSrc: require('../../../images/team/t.png')
     },
     {
@@ -52,7 +52,9 @@ export const TeamSection = React.forwardRef((props, ref) => {
 
     return (
       <Section ref={ref} background={gradient.greyBlack} section='section-four'>
-        <TeamSectionHeaderH2>Team</TeamSectionHeaderH2>
+        <TeamSectionHeaderWrapper>
+          <TeamSectionHeaderH2>Team</TeamSectionHeaderH2>
+        </TeamSectionHeaderWrapper>
         <TeamCardsContainer>
           { team.map(teamMember => <TeamCard key={teamMember.id} name={teamMember.name} position={teamMember.position} imageSrc={teamMember.imgSrc} />) }
         </TeamCardsContainer>

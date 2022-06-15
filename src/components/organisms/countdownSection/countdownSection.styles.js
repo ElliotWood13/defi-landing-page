@@ -34,6 +34,14 @@ const headerBottomShadow = keyframes`
 
 const SectionWrapper = styled.div`
   position: relative;
+
+  ${mediaQuery.sm} {
+    padding-bottom: ${pxToRem(50)};
+  }
+
+  ${mediaQuery.md} {
+    padding-bottom: ${pxToRem(125)};
+  }
 `
 
 const CountdownContainer = styled.div`
@@ -126,7 +134,7 @@ const BackgroundCircleOuterLg = styled.div`
     width: ${pxToRem(760)};
     height: ${pxToRem(760)};
     box-shadow: 0 0 29px #fffc66, 0 0 46px ${color.brand};
-    animation: ${circleOuterLgShadow} 3s linear infinite;
+    animation: ${circleOuterLgShadow} 5s linear infinite;
   }
 
   ${mediaQuery.md} {
@@ -149,12 +157,47 @@ const CountdownCircle = styled.div`
     border-radius: 50%;
     border: 1px solid ${color.brand};
     box-shadow: 0 0 6px ${color.brand}, 0 0 6px ${color.brand};
-    animation: ${countdownCircleShadow} 3s linear infinite;
+    animation: ${countdownCircleShadow} 5s linear infinite;
   }
 
   ${mediaQuery.md} {
     width: ${pxToRem(425)};
     height: ${pxToRem(425)};
+  }
+`
+
+const CrossHairHorizontal = styled.div`
+  ${mediaQuery.sm} {
+    position: absolute;
+    top: ${pxToRem(95)};
+    left: 50%;
+    transform: translateX(-50%);
+    width: ${pxToRem(730)};
+    height: ${pxToRem(2)};
+    background-color: #fffc66b1;
+    box-shadow: 0px 0px 19px 1px ${color.brand};
+  }
+
+  ${mediaQuery.md} {
+    width: ${pxToRem(795)};
+  }
+`
+
+const CrossHairVertical = styled.div`
+  ${mediaQuery.sm} {
+    position: absolute;
+    top: -${pxToRem(263)};
+    left: 50%;
+    transform: translateX(-50%);
+    width: ${pxToRem(2)};
+    height: ${pxToRem(730)};
+    background-color: #fffc66b1;
+    box-shadow: 0px 0px 19px 1px ${color.brand};
+  }
+
+  ${mediaQuery.md} {
+    top: -${pxToRem(295)};
+    height: ${pxToRem(795)};
   }
 `
 
@@ -189,7 +232,7 @@ const HeaderTop = styled.h3`
     0 0 30px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3),
     0 0 55px rgba(255, 255, 0, 0.3), 0 0 75px rgba(255, 255, 0, 0.3);
   margin-bottom: -${pxToRem(20)};
-  animation: ${headerTopShadow} 3s linear infinite;
+  animation: ${headerTopShadow} 5s linear infinite;
 
   ${mediaQuery.sm} {
     font-size: ${pxToRem(60)};
@@ -205,7 +248,7 @@ const HeaderBottom = styled.h3`
     0 0 30px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3),
     0 0 55px rgba(255, 255, 0, 0.3), 0 0 75px rgba(255, 255, 0, 0.3);
   font-size: ${pxToRem(42)};
-  animation: ${headerBottomShadow} 3s linear infinite;
+  animation: ${headerBottomShadow} 5s linear infinite;
 
   ${mediaQuery.sm} {
     font-size: ${pxToRem(36)};
@@ -224,14 +267,14 @@ const IconsWrapper = styled.div`
 
   ${mediaQuery.sm} {
     position: absolute;
-    bottom: -${pxToRem(206)};
+    bottom: -${pxToRem(160)};
     transform: translate(-50%);
-    left: 50%;
+    left: 45%;
     width: auto;
   }
 
   ${mediaQuery.md} {
-    bottom: -${pxToRem(254)};
+    bottom: -${pxToRem(126)};
   }
 `
 
@@ -321,6 +364,8 @@ export {
   BackgroundCircleInnerLg,
   BackgroundCircleOuterLg,
   CountdownCircle,
+  CrossHairHorizontal,
+  CrossHairVertical,
   HeaderWrapper,
   HeaderTop,
   HeaderBottom,

@@ -1,5 +1,15 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { pxToRem, color, fontWeight } from '../../../design'
+
+// const glowing = keyframes`
+//   0% { text-shadow: -7px -3px 8px #fffc66; }
+//   100% { text-shadow: 0px 0px 3px #fffc66; }
+// `
+
+const glowing = keyframes`
+  0% { box-shadow: -12px -9px 14px -11px #fffc66; }
+  100% { box-shadow: -5px -5px 30px 5px #000, 5px 5px 30px 5px #000; }
+`
 
 const NavigationWrapper = styled.div`
   transition: all 0.3s ease-in-out;
@@ -89,7 +99,8 @@ const LinkItem = styled.li`
 
   :hover {
     text-shadow: 0px 1px 8px ${color.brand};
-    box-shadow: 0px 0px 8px -1px ${color.brand};
+    /* box-shadow: 0px 0px 8px -1px ${color.brand}; */
+    animation: ${glowing} 0.5s linear;
   }
 `
 
