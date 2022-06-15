@@ -19,6 +19,7 @@ const CircleCard = styled.div`
   border: 1px solid
     ${({ color }) =>
       color === 'yellow' ? `${shadow.yellowOuter}` : `${shadow.whiteOuter}`};
+  background: #000;
 `
 
 const CircleCardInnerShadow = styled.div`

@@ -82,16 +82,24 @@ const FeaturesSectionHeaderH2 = styled.h2`
 `
 
 const HorizontalLine = styled.div`
-  ${mediaQuery.md} {
+  ${mediaQuery.sm} {
     background-color: ${color.white[100]};
     box-shadow: 0px 0px 19px 1px ${color.white[100]};
     position: absolute;
-    top: 47%;
+    top: ${pxToRem(602)};
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    width: calc(100% + 400px);
+    width: ${pxToRem(348)};
     height: 2px;
-    z-index: -30;
+  }
+
+  ${mediaQuery.md} {
+    top: ${pxToRem(458)};
+    width: ${pxToRem(700)};
+  }
+
+  ${mediaQuery.lg} {
+    width: ${pxToRem(900)};
   }
 `
 

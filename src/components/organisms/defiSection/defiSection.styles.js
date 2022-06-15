@@ -129,6 +129,48 @@ const HorizontalLine = styled.div`
   }
 `
 
+const HorizontalLineLeft = styled.div`
+  ${mediaQuery.sm} {
+    position: absolute;
+    top: ${pxToRem(663)};
+    left: 50%;
+    transform: translateX(-50%);
+    width: ${pxToRem(350)};
+    height: ${pxToRem(2)};
+    background-color: #fffc66b1;
+    box-shadow: 0px 0px 19px 1px ${color.brand};
+  }
+
+  ${mediaQuery.md} {
+    left: -${pxToRem(96)};
+    top: ${pxToRem(345)};
+    width: ${pxToRem(206)};
+  }
+
+  ${mediaQuery.lg} {
+    left: -${pxToRem(48)};
+    top: ${pxToRem(345)};
+    width: ${pxToRem(302)};
+  }
+`
+const HorizontalLineRight = styled.div`
+  ${mediaQuery.md} {
+    position: absolute;
+    top: ${pxToRem(345)};
+    right: -${pxToRem(302)};
+    transform: translateX(-50%);
+    width: ${pxToRem(206)};
+    height: ${pxToRem(2)};
+    background-color: #fffc66b1;
+    box-shadow: 0px 0px 19px 1px ${color.brand};
+  }
+
+  ${mediaQuery.lg} {
+    width: ${pxToRem(302)};
+    right: -${pxToRem(350)};
+  }
+`
+
 export {
   DefiSectionContainer,
   DefiSectionGrid,
@@ -139,4 +181,6 @@ export {
   Circle,
   CircleInnerShadow,
   HorizontalLine,
+  HorizontalLineLeft,
+  HorizontalLineRight,
 }
