@@ -68,7 +68,7 @@ const Blockquote = styled.blockquote`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  z-index: 20;
+  z-index: 9;
 
   font-size: ${pxToRem(40)};
   text-align: center;
@@ -87,7 +87,7 @@ const BlockquoteName = styled.span`
   font-size: ${pxToRem(18)};
   font-weight: 600;
   margin-top: ${pxToRem(16)};
-  z-index: 20;
+  z-index: 9;
 `
 
 const Circle = styled.div`

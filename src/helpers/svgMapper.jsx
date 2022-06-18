@@ -7,6 +7,7 @@ import { Medium } from '../components/atoms/icons'
 import { Twitter } from '../components/atoms/icons'
 import { ChevronDown } from '../components/atoms/icons'
 import { ChevronUp } from '../components/atoms/icons'
+import { FileDownload } from '../components/atoms/icons'
 
 // Icons: https://fontawesome.com/search?s=brands%2Csolid
 // Optimiser: https://jakearchibald.github.io/svgomg/
@@ -19,6 +20,7 @@ const svgs = {
   twitter: Twitter,
   chevronDown: ChevronDown,
   chevronUp: ChevronUp,
+  fileDownload: FileDownload,
 }
 
 export const Svg = ({ type, ...rest }) => {

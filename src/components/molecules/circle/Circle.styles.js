@@ -42,7 +42,7 @@ const CircleHeaderH3 = styled.h3`
   text-transform: uppercase;
   text-align: center;
   padding: ${pxToRem(3)};
-  z-index: 10;
+  z-index: 9;
   text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000,
     0 0 30px #000, 0 0 40px #000, 0 0 55px #000, 0 0 75px #000;
 `
@@ -53,7 +53,7 @@ const CircleText = styled.p`
   font-size: ${pxToRem(18)};
   font-weight: ${fontWeight.light};
   margin: ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(20)};
-  z-index: 10;
+  z-index: 9;
 `
 
 const CircleLineBottom = styled.div`

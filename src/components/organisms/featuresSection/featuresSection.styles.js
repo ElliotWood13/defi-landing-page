@@ -34,7 +34,7 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 9;
 
   ${mediaQuery.sm} {
     grid-column: 1 / 3;
@@ -55,7 +55,7 @@ const FeaturesSectionHeader = styled.div`
   box-shadow: 3px 5px 20px 5px rgba(255, 255, 255, 0.5) inset;
   display: inline-block;
   background-color: black;
-  z-index: 10;
+  z-index: 9;
 
   ${mediaQuery.lg} {
     white-space: nowrap;
@@ -78,7 +78,7 @@ const FeaturesSectionHeaderH2 = styled.h2`
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
     0 0 20px rgba(255, 255, 255, 0.5);
   border-radius: 3px;
-  z-index: 50;
+  z-index: 9;
 `
 
 const HorizontalLine = styled.div`

@@ -9,6 +9,7 @@ import {
   LinkList,
   LinkItem,
   StyledLink,
+  StyledSvg,
 } from './navigation.styles'
 import { useWindowResize } from '../../../hooks'
 
@@ -76,6 +77,9 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
       };
   }, [menuRef]);
 
+  const LitePaperLink = require('../../../images/LightPaper.pdf')
+  const PitchDeckLink = require('../../../images/PitchDeck.pdf')
+
   return (
     <FocusTrap active={mobileMenuOpen}>
       <NavigationWrapper isActive={mobileMenuOpen} ref={menuRef}>
@@ -109,6 +113,12 @@ export const Navigation = React.forwardRef(({ handleScroll }, ref) => {
                 </StyledLink>
               </LinkItem>
             ))}
+              <LinkItem>
+                <StyledLink href={LitePaperLink} download="ImpactDefiLitePaper">Lite Paper <StyledSvg type="fileDownload" /></StyledLink>
+              </LinkItem>
+              <LinkItem>
+                <StyledLink href={PitchDeckLink} download="ImpactDefiPitchDeck">Pitch Deck <StyledSvg type="fileDownload" /></StyledLink>
+              </LinkItem>
             </LinkList>
           </Nav>
       </NavigationWrapper>

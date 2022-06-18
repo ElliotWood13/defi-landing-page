@@ -18,8 +18,7 @@ const CircleCard = styled.div`
   box-shadow: 0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5),
     0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5); /* Remove */
 
-  border: 1px solid ${(color) => color === 'yellow' ? 'yellow' : 'white'};
-
+  border: 1px solid ${(color) => (color === 'yellow' ? 'yellow' : 'white')};
 `
 
 const CircleCardInnerShadow = styled.div`
@@ -44,7 +43,7 @@ const CircleHeaderH3 = styled.h3`
   text-transform: uppercase;
   text-align: center;
   padding: ${pxToRem(3)};
-  z-index: 10;
+  z-index: 9;
 `
 
 const CircleText = styled.p`
@@ -53,7 +52,7 @@ const CircleText = styled.p`
   font-size: ${pxToRem(18)};
   font-weight: 300;
   margin: ${pxToRem(20)};
-  z-index: 10;
+  z-index: 9;
 `
 
 export { CircleCard, CircleCardInnerShadow, CircleHeaderH3, CircleText }

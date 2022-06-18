@@ -38,11 +38,12 @@ const TeamSectionHeaderWrapper = styled.div`
 const TeamSectionHeaderH2 = styled.h2`
   color: white;
   font-size: ${pxToRem(40)};
-  font-weight: ${fontWeight.normal};
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: ${pxToRem(40)};
+  margin-bottom: 0 auto ${pxToRem(40)};
   width: ${pxToRem(150)};
+  font-weight: ${fontWeight.medium};
+  filter: drop-shadow(5px 3px 4px #9a9a9a);
 
   ${mediaQuery.sm} {
     margin-bottom: ${pxToRem(68)};

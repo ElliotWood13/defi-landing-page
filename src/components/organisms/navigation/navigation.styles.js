@@ -1,10 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { pxToRem, color, fontWeight } from '../../../design'
-
-// const glowing = keyframes`
-//   0% { text-shadow: -7px -3px 8px #fffc66; }
-//   100% { text-shadow: 0px 0px 3px #fffc66; }
-// `
+import { Svg } from '../../../helpers/svgMapper'
 
 const glowing = keyframes`
   0% { box-shadow: -12px -9px 14px -11px #fffc66; }
@@ -99,7 +95,6 @@ const LinkItem = styled.li`
 
   :hover {
     text-shadow: 0px 1px 8px ${color.brand};
-    /* box-shadow: 0px 0px 8px -1px ${color.brand}; */
     animation: ${glowing} 0.5s linear;
   }
 `
@@ -114,6 +109,16 @@ const StyledLink = styled.a`
   color: ${color.grey[100]};
 `
 
+const StyledSvg = styled(Svg)`
+  height: ${pxToRem(20)};
+  width: ${pxToRem(20)};
+  margin-left: ${pxToRem(4)};
+
+  path {
+    fill: ${color.white[100]};
+  }
+`
+
 export {
   NavigationWrapper,
   Burger,
@@ -124,4 +129,5 @@ export {
   LinkList,
   LinkItem,
   StyledLink,
+  StyledSvg,
 }
