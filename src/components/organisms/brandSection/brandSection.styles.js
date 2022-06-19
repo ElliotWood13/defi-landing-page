@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { pxToRem, mediaQuery, color, fontWeight } from '../../../design'
+import { Svg } from '../../../helpers/svgMapper'
 
 const BrandWrapper = styled.div`
   display: flex;
@@ -55,7 +56,7 @@ const LogoImage = styled.img`
 `
 
 const BrandHeaderWrapper = styled.div`
-  position: absolute;
+  /* position: absolute;
   bottom: ${pxToRem(240)};
 
   ${mediaQuery.xxs} {
@@ -64,10 +65,10 @@ const BrandHeaderWrapper = styled.div`
 
   ${mediaQuery.xs} {
     bottom: ${pxToRem(120)};
-  }
+  } */
 
   ${mediaQuery.sm} {
-    bottom: ${pxToRem(60)};
+    /* bottom: ${pxToRem(60)}; */
     box-shadow: 0px -13px 22px 13px #000, 0px 13px 22px 13px #000,
       0px 0px 19px 20px #000 inset;
     background: linear-gradient(
@@ -111,6 +112,39 @@ const BrandTagline = styled.p`
   }
 `
 
+const DownloadWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: ${pxToRem(20)};
+`
+
+const PdfDownload = styled.a`
+  display: flex;
+  align-items: center;
+  color: ${color.white[100]};
+  background: ${color.black[100]};
+  padding: ${pxToRem(8)};
+  border: 1px solid ${color.white[100]};
+  border-radius: 4px;
+  box-shadow: 0 0 1.25rem rgb(255 255 255 / 50%),
+    0 0 1.25rem rgb(255 255 255 / 50%);
+  z-index: 1;
+
+  :first-child {
+    margin-right: ${pxToRem(8)};
+  }
+`
+
+const StyledSvg = styled(Svg)`
+  height: ${pxToRem(20)};
+  width: ${pxToRem(20)};
+  margin-left: ${pxToRem(4)};
+
+  path {
+    fill: ${color.white[100]};
+  }
+`
+
 export {
   BrandWrapper,
   GridImage,
@@ -118,4 +152,7 @@ export {
   BrandHeaderWrapper,
   BrandText,
   BrandTagline,
+  DownloadWrapper,
+  PdfDownload,
+  StyledSvg,
 }

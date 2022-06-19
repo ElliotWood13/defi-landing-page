@@ -16,9 +16,6 @@ const CircleCard = styled.div`
   border: ${pxToRem(2)} solid rgb(252, 252, 233);
   box-shadow: 0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5),
     0 0 ${pxToRem(20)} rgba(255, 255, 255, 0.5);
-  border: 1px solid
-    ${({ color }) =>
-      color === 'yellow' ? `${shadow.yellowOuter}` : `${shadow.whiteOuter}`};
   background: #000;
 `
 
