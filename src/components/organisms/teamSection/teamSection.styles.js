@@ -40,7 +40,7 @@ const TeamSectionHeaderH2 = styled.h2`
   font-size: ${pxToRem(40)};
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 0 auto ${pxToRem(40)};
+  margin: 0 auto ${pxToRem(40)};
   width: ${pxToRem(150)};
   font-weight: ${fontWeight.medium};
   filter: drop-shadow(5px 3px 4px #9a9a9a);
