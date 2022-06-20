@@ -56,19 +56,8 @@ const LogoImage = styled.img`
 `
 
 const BrandHeaderWrapper = styled.div`
-  /* position: absolute;
-  bottom: ${pxToRem(240)};
-
-  ${mediaQuery.xxs} {
-    bottom: ${pxToRem(210)};
-  }
-
-  ${mediaQuery.xs} {
-    bottom: ${pxToRem(120)};
-  } */
-
   ${mediaQuery.sm} {
-    /* bottom: ${pxToRem(60)}; */
+    position: relative;
     box-shadow: 0px -13px 22px 13px #000, 0px 13px 22px 13px #000,
       0px 0px 19px 20px #000 inset;
     background: linear-gradient(
@@ -116,6 +105,10 @@ const DownloadWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: ${pxToRem(20)};
+
+  ${mediaQuery.sm} {
+    margin-bottom: ${pxToRem(20)};
+  }
 `
 
 const PdfDownload = styled.a`

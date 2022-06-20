@@ -186,7 +186,7 @@ const CrossHairHorizontal = styled.div`
 const CrossHairVertical = styled.div`
   ${mediaQuery.sm} {
     position: absolute;
-    top: -${pxToRem(263)};
+    top: -${pxToRem(244)};
     left: 50%;
     transform: translateX(-50%);
     width: ${pxToRem(2)};
@@ -196,7 +196,7 @@ const CrossHairVertical = styled.div`
   }
 
   ${mediaQuery.md} {
-    top: -${pxToRem(295)};
+    top: -${pxToRem(276)};
     height: ${pxToRem(795)};
   }
 `
@@ -252,6 +252,31 @@ const HeaderBottom = styled.h3`
 
   ${mediaQuery.sm} {
     font-size: ${pxToRem(36)};
+  }
+`
+
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: ${pxToRem(8)};
+`
+
+const InputImage = styled.img`
+  height: ${pxToRem(28)};
+  width: ${pxToRem(168)};
+  margin-right: ${pxToRem(8)};
+
+  ${mediaQuery.sm} {
+    width: ${pxToRem(152)};
+  }
+`
+
+const ButtonImage = styled.img`
+  height: ${pxToRem(28)};
+  width: ${pxToRem(68)};
+
+  ${mediaQuery.sm} {
+    width: ${pxToRem(52)};
   }
 `
 
@@ -369,6 +394,9 @@ export {
   HeaderWrapper,
   HeaderTop,
   HeaderBottom,
+  ImageWrapper,
+  InputImage,
+  ButtonImage,
   IconsWrapper,
   StyledSvg,
   DiscordSvgWrapper,

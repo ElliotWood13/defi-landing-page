@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../../layouts/section'
 import { gradient } from '../../../design'
-import { SectionWrapper, CountdownContainer, BackgroundCircleInnerMd, BackgroundCircleOuterMd, BackgroundCircleInnerLg, BackgroundCircleOuterLg, CountdownCircle, CrossHairHorizontal, CrossHairVertical, HeaderWrapper, HeaderTop, HeaderBottom, IconsWrapper, StyledSvg, DiscordSvgWrapper, TwitterSvgWrapper,MediumSvgWrapper } from './countdownSection.styles'
+import { SectionWrapper, CountdownContainer, BackgroundCircleInnerMd, BackgroundCircleOuterMd, BackgroundCircleInnerLg, BackgroundCircleOuterLg, CountdownCircle, CrossHairHorizontal, CrossHairVertical, HeaderWrapper, HeaderTop, HeaderBottom, ImageWrapper, InputImage, ButtonImage, IconsWrapper, StyledSvg, DiscordSvgWrapper, TwitterSvgWrapper,MediumSvgWrapper } from './countdownSection.styles'
 
 export const CountdownSection = React.forwardRef((props, ref) => {
   return (
@@ -18,6 +18,18 @@ export const CountdownSection = React.forwardRef((props, ref) => {
           <HeaderWrapper>
             <HeaderTop>Defi 3.0</HeaderTop>
             <HeaderBottom>begins here</HeaderBottom>
+            <ImageWrapper>
+              <InputImage
+                src={require('../../../images/white-input.png')}
+                alt=""
+                role="presentation"
+              />
+              <ButtonImage
+                src={require('../../../images/enter-button.png')}
+                alt=""
+                role="presentation"
+              />
+            </ImageWrapper>
           </HeaderWrapper>
         </CountdownContainer>
 
